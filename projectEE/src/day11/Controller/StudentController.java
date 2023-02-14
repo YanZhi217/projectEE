@@ -6,9 +6,9 @@ import java.util.Scanner;
 
 public class StudentController {
     private StudentService studentservice = new StudentService();
+    private Scanner sc = new Scanner(System.in);
     //开启学生系统，并展示学生管理系统菜单
     public void start() {
-        Scanner sc = new Scanner(System.in);
         student_exit:
             while(true){
                 System.out.println("---------------欢迎来到学生信息管理系统,请选择您要进行的操作---------------");
@@ -20,7 +20,8 @@ public class StudentController {
                         addStudent();
                         break;
                     case "2" :
-                        System.out.println("删除");
+                        //System.out.println("删除");
+                        deleteStudentById();
                         break;
                     case "3" :
                         System.out.println("修改");
@@ -40,8 +41,30 @@ public class StudentController {
 
     }
 
+    //删除学生
+    public void deleteStudentById() {
+        String delId;
+        while(true){
+            //键盘录入要删除的学生id
+            System.out.println("请输入您要删除的学生id");
+            delId = sc.next();
+            //判断id是否存在，不存在则一直录入
+            boolean exists = studentservice.isExists(delId);
+            if(!exists){
+                System.out.println("您输入的学生id不存在，请重新输入");
+            }else{
+                break;
+            }
+        }
+
+        //调用StudentService中的deleteStudentById(),根据id删除学生
+        studentservice.deleteStudentById(delId);
+        //提示删除成功
+        System.out.println("删除成功!");
+    }
+
     //查看所有学生
-    private void findAllStudent() {
+    public void findAllStudent() {
         //调用Controller中的findAllStudent方法，获取对象数组
         Student[] stus = studentservice.findAllStudent();
         //判断数组内存地址是否为null
@@ -60,7 +83,6 @@ public class StudentController {
 
     //添加学生
     public void addStudent() {
-        Scanner sc = new Scanner(System.in);
         String id;
         //键盘接受学生信息
         while(true){

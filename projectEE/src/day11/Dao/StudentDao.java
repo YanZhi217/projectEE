@@ -2,6 +2,8 @@ package day11.Dao;
 
 import day11.doamin.Student;
 
+import java.util.Objects;
+
 public class StudentDao {
     //创建学生对象数组
     private static Student[] stus = new Student[5];
@@ -34,5 +36,26 @@ public class StudentDao {
             return true;
         }
 
+    }
+
+    //删除学生
+    public void deleteStudentById(String delId) {
+        //查找学生id所在的索引
+        int index = getIndex(delId);
+        //将该索引覆盖为null
+        stus[index] = null;
+    }
+
+    //查找id索引位置
+    public int getIndex(String id){
+        int index = -1;
+        for (int i = 0; i < stus.length; i++) {
+            Student stu = stus[i];
+            if(stu != null && stu.getId().equals(id)){
+                index = i;
+                break;
+            }
+        }
+        return index;
     }
 }

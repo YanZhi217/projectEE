@@ -4,6 +4,7 @@ import day11.Dao.StudentDao;
 import day11.doamin.Student;
 
 public class StudentService {
+    //创建StudentDao对象
     private StudentDao studentdao = new StudentDao();
 
     //获取学生对象数组并判断是否有学生信息
@@ -51,6 +52,12 @@ public class StudentService {
         //将学生对象传递给Dao的StudentDao的addStudent()
         //将返回的boolean类型返回给StudentController
         return studentdao.addStudent(stu);
+
+    }
+
+    //删除学生
+    public void deleteStudentById(String delId) {
+        studentdao.deleteStudentById(delId);
 
     }
 }
