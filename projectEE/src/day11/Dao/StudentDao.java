@@ -3,9 +3,15 @@ package day11.Dao;
 import day11.doamin.Student;
 
 public class StudentDao {
+    //创建学生对象数组
+    private Student[] stus = new Student[5];
+
+    public Student[] findAllStudent() {
+        return stus;
+    }
+
     public boolean addStudent(Student stu) {
-        //创建学生对象数组
-        Student[] stus = new Student[5];
+
         //添加学生到数组
         //定义变量index=-1,假设数组已经存满,没有null元素
         int index = -1;
