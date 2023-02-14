@@ -6,6 +6,30 @@ import day11.doamin.Student;
 public class StudentService {
     private StudentDao studentdao = new StudentDao();
 
+    //获取学生对象数组并判断是否有学生信息
+    public Student[] findAllStudent() {
+        //调用StudentDao中的findAllStudent获取学生对象数组
+        Student[] allStudent = studentdao.findAllStudent();
+        //判断数组中是否有学生信息
+        boolean flag = false;
+        for (int i = 0; i < allStudent.length; i++) {
+            Student stu = allStudent[i];
+            if(stu != null){
+                flag = true;
+                break;
+            }
+        }
+
+        if(flag){
+            //有信息
+            return allStudent;
+        }else{
+            //无信息
+            return null;
+        }
+    }
+
+    //判断学生学号是否存在
     public boolean isExists(String id) {
         Student[] stus = studentdao.findAllStudent();
         //假设id不存在
@@ -21,6 +45,7 @@ public class StudentService {
         return exists;
     }
 
+    //添加学生
     public boolean addStudent(Student stu) {
         //创建StudentDao对象
         //将学生对象传递给Dao的StudentDao的addStudent()

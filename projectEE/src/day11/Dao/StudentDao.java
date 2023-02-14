@@ -4,12 +4,14 @@ import day11.doamin.Student;
 
 public class StudentDao {
     //创建学生对象数组
-    private Student[] stus = new Student[5];
+    private static Student[] stus = new Student[5];
 
+    //返回学生对象数组
     public Student[] findAllStudent() {
         return stus;
     }
 
+    //添加学生到数组
     public boolean addStudent(Student stu) {
 
         //添加学生到数组

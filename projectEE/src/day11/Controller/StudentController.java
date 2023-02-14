@@ -5,13 +5,14 @@ import day11.doamin.Student;
 import java.util.Scanner;
 
 public class StudentController {
+    private StudentService studentservice = new StudentService();
     //开启学生系统，并展示学生管理系统菜单
     public void start() {
         Scanner sc = new Scanner(System.in);
         student_exit:
             while(true){
                 System.out.println("---------------欢迎来到学生信息管理系统,请选择您要进行的操作---------------");
-                System.out.println("\t1:增加学生\t2:删除学生\t3:修改学生\t4:查询学生\t5:退出");
+                System.out.println("\t1:增加学生\t2:删除学生\t3:修改学生\t4:查看所有学生\t5:退出");
                 String i = sc.next();
                 switch(i){
                     case "1" :
@@ -25,7 +26,8 @@ public class StudentController {
                         System.out.println("修改");
                         break;
                     case "4" :
-                        System.out.println("查询");
+                        //System.out.println("查询");
+                        findAllStudent();
                         break;
                     case "5" :
                         System.out.println("感谢您的使用");
@@ -38,8 +40,26 @@ public class StudentController {
 
     }
 
+    //查看所有学生
+    private void findAllStudent() {
+        //调用Controller中的findAllStudent方法，获取对象数组
+        Student[] stus = studentservice.findAllStudent();
+        //判断数组内存地址是否为null
+        if(stus == null){
+            System.out.println("查无信息，请重试");
+        }
+        //遍历数组，打印学生信息
+        System.out.println("学号\t\t姓名\t年龄\t生日");
+        for (int i = 0; i < stus.length; i++) {
+            Student stu = stus[i];
+            if(stu != null){
+                System.out.println(stu.getId() + "\t" + stu.getName() + "\t" + stu.getAge() + "\t\t" + stu.getBirthday());
+            }
+        }
+    }
+
+    //添加学生
     public void addStudent() {
-        StudentService studentservice = new StudentService();
         Scanner sc = new Scanner(System.in);
         String id;
         //键盘接受学生信息
