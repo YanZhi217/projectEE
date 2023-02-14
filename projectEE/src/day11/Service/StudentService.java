@@ -60,4 +60,8 @@ public class StudentService {
         studentdao.deleteStudentById(delId);
 
     }
+
+    public void updateStudentById(String updateId, Student newStu) {
+        studentdao.updateStudentById(updateId,newStu);
+    }
 }

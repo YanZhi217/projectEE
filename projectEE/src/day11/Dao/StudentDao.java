@@ -2,8 +2,6 @@ package day11.Dao;
 
 import day11.doamin.Student;
 
-import java.util.Objects;
-
 public class StudentDao {
     //创建学生对象数组
     private static Student[] stus = new Student[5];
@@ -57,5 +55,13 @@ public class StudentDao {
             }
         }
         return index;
+    }
+
+    //修改学生
+    public void updateStudentById(String updateId, Student newStu) {
+        //找索引位置
+        int index = getIndex(updateId);
+        //使用新的学生对象替换
+        stus[index] = newStu;
     }
 }
