@@ -1,11 +1,11 @@
 package day11.Service;
 
 import day11.Dao.StudentDao;
-import day11.doamin.Student;
+import day11.domain.Student;
 
 public class StudentService {
     //创建StudentDao对象
-    private StudentDao studentdao = new StudentDao();
+    public StudentDao studentdao = new StudentDao();
 
     //获取学生对象数组并判断是否有学生信息
     public Student[] findAllStudent() {
@@ -13,9 +13,8 @@ public class StudentService {
         Student[] allStudent = studentdao.findAllStudent();
         //判断数组中是否有学生信息
         boolean flag = false;
-        for (int i = 0; i < allStudent.length; i++) {
-            Student stu = allStudent[i];
-            if(stu != null){
+        for (Student stu : allStudent) {
+            if (stu != null) {
                 flag = true;
                 break;
             }
@@ -32,13 +31,13 @@ public class StudentService {
 
     //判断学生学号是否存在
     public boolean isExists(String id) {
+        //取出所有学生对象
         Student[] stus = studentdao.findAllStudent();
         //假设id不存在
         boolean exists = false;
         //遍历数组，获取每一个学生对象，判断
-        for (int i = 0; i < stus.length; i++) {
-            Student student = stus[i];
-            if(student != null && student.getId().equals(id)){
+        for (Student student : stus) {
+            if (student != null && student.getId().equals(id)) {
                 exists = true;
                 break;
             }
@@ -52,15 +51,14 @@ public class StudentService {
         //将学生对象传递给Dao的StudentDao的addStudent()
         //将返回的boolean类型返回给StudentController
         return studentdao.addStudent(stu);
-
     }
 
     //删除学生
     public void deleteStudentById(String delId) {
         studentdao.deleteStudentById(delId);
-
     }
 
+    //修改学生
     public void updateStudentById(String updateId, Student newStu) {
         studentdao.updateStudentById(updateId,newStu);
     }

@@ -1,7 +1,6 @@
-package day11.doamin;
+package day11.domain;
 
-public class Student {
-
+public class Teacher {
     //封装用户数据
 
     private String id;
@@ -9,10 +8,10 @@ public class Student {
     private String age;
     private String birthday;
 
-    public Student() {
+    public Teacher() {
     }
 
-    public Student(String id, String name, String age, String birthday) {
+    public Teacher(String id, String name, String age, String birthday) {
         this.id = id;
         this.name = name;
         this.age = age;

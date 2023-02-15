@@ -1,10 +1,10 @@
 package day11.Dao;
 
-import day11.doamin.Student;
+import day11.domain.Student;
 
 public class StudentDao {
     //创建学生对象数组
-    private static Student[] stus = new Student[5];
+    public static Student[] stus = new Student[5];
 
     //返回学生对象数组
     public Student[] findAllStudent() {
