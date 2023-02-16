@@ -24,7 +24,7 @@ class Fu {
 
  class Zi extends Fu {
     public Zi(){
-        this(10); // 不存在super();,因为super和this不能共存，super和this
+        this(10); // 不存在super();,因为super和this不能共存，super和this必须在第一行
     }
 
     public Zi(int age){

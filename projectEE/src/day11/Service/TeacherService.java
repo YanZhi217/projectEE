@@ -1,9 +1,10 @@
 package day11.Service;
 
+import day11.Dao.OtherTeacherDao;
 import day11.domain.Teacher;
-import day11.Dao.TeacherDao;
+
 public class TeacherService {
-    public TeacherDao teacherdao = new TeacherDao();
+    private final OtherTeacherDao teacherdao = new OtherTeacherDao();
     //检查学号是否存在
     public boolean isExists(String id) {
         Teacher[] teas = teacherdao.findAllTeacher();

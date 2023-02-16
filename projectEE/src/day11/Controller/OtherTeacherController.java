@@ -2,8 +2,9 @@ package day11.Controller;
 
 import day11.domain.Teacher;
 
-public class TeacherController extends BaseTeacherController{
+public class OtherTeacherController extends BaseTeacherController{
 
+    @Override
     //录入老师信息
     public Teacher inputTeacherInfo(String id) {
         //录入信息
@@ -15,14 +16,8 @@ public class TeacherController extends BaseTeacherController{
         String birthday = sc.next();
 
         //封装对象
-        Teacher tea = new Teacher();
-        tea.setId(id);
-        tea.setName(name);
-        tea.setAge(age);
-        tea.setBirthday(birthday);
-
+        return new Teacher(id,name,age,birthday);
         //返回对象
-        return tea;
     }
 
 }

@@ -2,7 +2,7 @@ package day11.Controller;
 
 import day11.domain.Student;
 
-public class StudentController extends BaseStudentController{
+public class OtherStudentController extends BaseStudentController{
 
     @Override
     //对方法重写的注解
@@ -16,13 +16,10 @@ public class StudentController extends BaseStudentController{
         String birthday = sc.next();
 
         //开闭原则：对扩展内容开放，对修改内容关闭，就是说想要扩展功能则允许，想要修改原有代码则拒绝
+        //因此我们另外复制一份用来修改我们想要的功能
         //学生信息封装为学生对象
-        Student stu = new Student();
-        stu.setId(id);
-        stu.setName(name);
-        stu.setAge(age);
-        stu.setBirthday(birthday);
 
-        return stu;
+
+        return new Student(id,name,age,birthday);
     }
 }

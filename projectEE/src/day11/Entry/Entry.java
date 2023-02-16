@@ -1,8 +1,8 @@
 package day11.Entry;
 
 import java.util.Scanner;
-import day11.Controller.StudentController;
-import day11.Controller.TeacherController;
+import day11.Controller.OtherStudentController;
+import day11.Controller.OtherTeacherController;
     /*
        需求说明:
             添加学生: 键盘录入学生信息(id，name，age，birthday),使用数组存储学生信息,要求学生的id不能重复
@@ -35,13 +35,13 @@ public class Entry {
             switch(i){
                 case "1" :
                     //开启学生管理系统
-                    StudentController studentcontroller = new StudentController();
+                    OtherStudentController studentcontroller = new OtherStudentController();
                     studentcontroller.start();
                     break;
                 case "2" :
                     //开启老师管理系统
                     //System.out.println("欢迎来到老师管理");
-                    TeacherController teachercontroller = new TeacherController();
+                    OtherTeacherController teachercontroller = new OtherTeacherController();
                     teachercontroller.start();
                     break;
                 case "3" :
