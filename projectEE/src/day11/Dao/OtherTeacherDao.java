@@ -4,7 +4,7 @@ import day11.domain.Teacher;
 
 import java.util.ArrayList;
 
-public class OtherTeacherDao extends BaseTeacherDao{
+public class OtherTeacherDao implements BaseTeacherDao{
     private final static ArrayList<Teacher> teas = new ArrayList<>();
 
     static {

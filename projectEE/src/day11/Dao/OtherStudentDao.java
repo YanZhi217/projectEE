@@ -2,7 +2,7 @@ package day11.Dao;
 
 import day11.domain.Student;
 import java.util.ArrayList;
-public class OtherStudentDao extends BaseStudentDao{
+public class OtherStudentDao implements BaseStudentDao{
     //创建学生对象数组
     private final static ArrayList<Student> stus = new ArrayList<>();
 

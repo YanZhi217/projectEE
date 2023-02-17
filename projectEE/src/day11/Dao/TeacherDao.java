@@ -2,7 +2,7 @@ package day11.Dao;
 
 import day11.domain.Teacher;
 
-public class TeacherDao extends BaseTeacherDao{
+public class TeacherDao implements BaseTeacherDao{
     public static Teacher[] teas = new Teacher[5];
 
     static {

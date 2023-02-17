@@ -1,11 +1,13 @@
 package day11.Service;
 
-import day11.Dao.OtherStudentDao;
+import day11.Dao.BaseStudentDao;
 import day11.domain.Student;
+import day11.factory.StudentDaoFactory;
 
 public class StudentService {
     //创建StudentDao对象
-    private final OtherStudentDao studentdao = new OtherStudentDao();
+    //private final OtherStudentDao studentdao = new OtherStudentDao();
+    private final BaseStudentDao studentdao = StudentDaoFactory.getStudentDao();
 
     //获取学生对象数组并判断是否有学生信息
     public Student[] findAllStudent() {

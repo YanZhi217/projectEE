@@ -2,7 +2,7 @@ package day11.Dao;
 
 import day11.domain.Student;
 
-public class StudentDao extends BaseStudentDao{
+public class StudentDao implements BaseStudentDao{
     //创建学生对象数组
     public static Student[] stus = new Student[5];
 
