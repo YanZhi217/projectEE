@@ -1,6 +1,6 @@
-package day12.InnerClass;
+package day12.lambda;
 
-public class test6 {
+public class test1 {
     public static void main(String[] args) {
         goSwimming(new Swimming() {
             @Override
@@ -9,21 +9,16 @@ public class test6 {
             }
         });
 
+        /*
+            理解: 对于Lambda表达式, 对匿名内部类进行了优化
+         */
+        goSwimming(() -> System.out.println("铁汁, 我们去游泳吧"));
     }
 
     /**
      * 使用接口的方法
      */
-    public static void goSwimming(Swimming swimming){
-        /*
-          多态:
-            Swimming swim = new Swimming() {
-                @Override
-                public void swim() {
-                    System.out.println("铁汁, 我们去游泳吧");
-                }
-            }
-         */
+    public static void goSwimming(Swimming swimming) {
         swimming.swim();
     }
 }
