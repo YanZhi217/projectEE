@@ -1,4 +1,4 @@
-package day15.Set3.TreeSet2;
+package day16.Set1.TreeSet2;
 
 public class Student implements Comparable<Student>{
     private String name;
@@ -38,7 +38,7 @@ public class Student implements Comparable<Student>{
 
     @Override
     public int compareTo(Student o) {
-        //按照对象的年龄进行排序
+        //按照对象的年龄进行自然排序
         //主要判断条件
         //this.age代表将要存入的对象的年龄，o.age代表上一个已经存入的对象的年龄，将两个作比较
         // 返回值为负数则当前元素较小，存左边，返回值为零则重复，丢掉，证书，较大，存右边

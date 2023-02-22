@@ -1,8 +1,9 @@
-package day15.Set3.TreeSet2;
+package day16.Set1.TreeSet2;
 
 import java.util.TreeSet;
 /*
     TreeSet存储Student类型
+    底层是红黑树结构
  */
 public class demo2 {
     public static void main(String[] args) {
