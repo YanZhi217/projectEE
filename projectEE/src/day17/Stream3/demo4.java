@@ -67,7 +67,7 @@ public class demo4 {
     }
 
     private static void method2(ArrayList<String> list) {
-        //        Stream<T> skip(long n)：跳过指定参数个数的数据， 返回这个参数之后的所有数据（不包括这个）
+        //        Stream<T> skip(long n)：跳过指定参数个数的数据,返回这个参数之后的所有数据（不包括这个）
         list.stream().skip(1).forEach(s-> System.out.println(s));
     }
 
