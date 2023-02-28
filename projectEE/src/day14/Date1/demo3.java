@@ -10,7 +10,7 @@ public class demo3 {
 
         //创建了一个日期格式。
         //SimpleDateFormat sdf = new SimpleDateFormat("yyyy年MM月dd日 HH时mm分ss秒");
-//        SimpleDateFormat sdf = new SimpleDateFormat("yyyy年MM月dd日");
+        //SimpleDateFormat sdf = new SimpleDateFormat("yyyy年MM月dd日");
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 
         String result1 = sdf.format(date);

@@ -9,8 +9,11 @@ import java.util.concurrent.ThreadPoolExecutor;
 public class demo2 {
     public static void main(String[] args) throws InterruptedException {
         //参数不是初始值而是最大值
+        //创建出来的池子是空的,线程最大值为10
         ExecutorService executorService = Executors.newFixedThreadPool(10);
 
+        //ThreadPoolExecutor接下来会学
+        //getPoolSize()得到线程池里线程的数量
         ThreadPoolExecutor pool = (ThreadPoolExecutor) executorService;
         System.out.println(pool.getPoolSize());//0
 
