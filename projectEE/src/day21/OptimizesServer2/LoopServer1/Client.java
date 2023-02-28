@@ -8,7 +8,7 @@ public class Client {
         Socket socket = new Socket("127.0.0.1", 10001);
 
         //是本地的流,用来读取本地文件的.
-        BufferedInputStream bis = new BufferedInputStream(new FileInputStream("optimizeserver\\ClientDir\\1.jpg"));
+        BufferedInputStream bis = new BufferedInputStream(new FileInputStream("C:\\Users\\YanZhi\\Desktop\\1.pdf"));
 
         //写到服务器 --- 网络中的流
         OutputStream os = socket.getOutputStream();

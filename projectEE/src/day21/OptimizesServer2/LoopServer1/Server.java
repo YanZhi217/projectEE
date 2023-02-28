@@ -14,7 +14,7 @@ public class Server {
             //网络中的流,从客户端读取数据的
             BufferedInputStream bis = new BufferedInputStream(accept.getInputStream());
             //本地的IO流,把数据写到本地中,实现永久化存储
-            BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream("optimizeserver\\ServerDir\\copy.jpg"));
+            BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream("C:\\Users\\YanZhi\\Desktop\\3.pdf"));
 
             int b;
             while ((b = bis.read()) != -1) {

@@ -19,7 +19,7 @@ public class Server {
             BufferedInputStream bis = new BufferedInputStream(accept.getInputStream());
             //本地的IO流,把数据写到本地中,实现永久化存储
             BufferedOutputStream bos = new BufferedOutputStream(
-                    new FileOutputStream("C:\\Users\\YanZhi\\Desktop\\" + UUID.randomUUID().toString() + ".pdf"));
+                    new FileOutputStream("C:\\Users\\YanZhi\\Desktop\\" + UUID.randomUUID() + ".pdf"));
 
             int b;
             while ((b = bis.read()) != -1) {
