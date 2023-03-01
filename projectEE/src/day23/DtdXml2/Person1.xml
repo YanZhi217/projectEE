@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE persons SYSTEM 'PersonDtd.dtd'>
+<!--dtd约束的第一种方式-->
+<!--persons表示主标签，SYSTEM表示从本地引入DTD约束，之后单引号内填入dtd文件的路径-->
+<!--
+    什么是约束
+        用来限定xml文件中可使用的标签以及属性
+        约束的分类
+            DTD
+            schema
+    编写DTD约束
+    步骤
+        1. 创建一个文件，这个文件的后缀名为.dtd
+        2. 看xml文件中使用了哪些元素
+            <!ELEMENT> 可以定义元素
+        3. 判断元素是简单元素还是复杂元素
+            简单元素：没有子元素。 复杂元素：有子元素的元素
+-->
+
+<persons>
+    <person>
+        <name>张三</name>
+        <age>23</age>
+    </person>
+
+
+</persons>

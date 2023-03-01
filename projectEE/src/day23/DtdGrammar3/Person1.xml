@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE persons SYSTEM 'D:\develop\projectEE\src\day23\DtdGrammar3\PersonDtd.dtd'>
+
+<!--
+    DTD语法
+        定义元素
+        定义一个元素的格式为：
+        简单元素：
+            EMPTY: 表示标签体为空
+            ANY: 表示标签体可以为空也可以不为空
+            PCDATA: 表示该元素的内容部分为字符串
+        复杂元素：
+        直接写子元素名称. 多个子元素可以使用","或者"|"隔开； ","表示定义子元素的顺序 , "|": 表示子元素只能出现任意一个 ,
+        "?"零次或一次 , "+"一次或多次 , "*"零次或多次 , 如果不写则表示出现一次
+
+        定义属性
+        格式
+            定义一个属性的格式为：
+            属性的类型：
+                CDATA类型：普通的字符串
+            属性的约束:
+                #REQUIRED： 必需的 , #IMPLIED： 属性不是必需的 , #FIXED value：属性值是固定的
+-->
+
+<persons>
+    <person id="001">
+        <name>张三</name>
+        <age>23</age>
+    </person>
+
+    <person id="002">
+        <name>张三</name>
+        <age>23</age>
+    </person>
+
+</persons>

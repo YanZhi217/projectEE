@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+
+<!--
+    引入schema约束
+        步骤
+            1，在根标签上定义属性xmlns=" http://www.w3.org/2001/XMLSchema-instance " 表示被别人约束
+            2，通过xmlns引入约束文件的名称空间    表示被谁约束
+            3，给某一个xmlns属性添加一个标识，用于区分不同的名称空间 格式为: xmlns:标识=“名称空间地址” ,标识可以是任意的，但是一般取值都是xsi
+            4，通过xsi:schemaLocation指定名称空间所对应的约束文件路径 格式为：xsi:schemaLocation = "名称空间url 文件路径“
+-->
+<persons
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://YanZhi/Study"
+        xsi:schemaLocation="http://YanZhi/Study Person.xsd"
+>
+
+    <!--
+        schema和dtd的区别
+            1. schema约束文件也是一个xml文件，符合xml的语法，这个文件的后缀名.xsd
+            2. 一个xml中可以引用多个schema约束文件，多个schema使用名称空间区分（名称空间类似于java包名）
+            3. dtd里面元素类型的取值比较单一常见的是PCDATA类型，但是在schema里面可以支持很多个数据类型
+            4. schema 语法更加的复杂
+
+        Schema文件约束着其他xml文件的同时也被别的文件约束着
+
+        编写schema约束
+            步骤
+                1，创建一个文件，这个文件的后缀名为.xsd。
+                2，定义文档声明
+                3，schema文件的根标签为：<schema>
+                4，在根标签中定义属性： xmlns= http://www.w3.org/2001/XMLSchema
+                5，在根标签中定义属性 ：targetNamespace =唯一的url地址，指定当前这个schema文件的名称空间。
+                6，在根标签中定义属性： elementFormDefault="qualified“，表示当前schema文件是一个质量良好的文件。
+                7，通过element定义元素
+                8，判断当前元素是简单元素还是复杂元素
+
+        定义属性
+            <attribute name="xxx" type="yyy"/>或者<attribute name="xxx" type="yyy"></attribute>
+            属性可拥有指定的默认值或者固定值，默认值格式为default="xxx" , 固定值格式为fixed="xxx"
+            在默认的情况下，属性是可选的，如果需要定义为必需，可以使用use="required" , optional表示可选
+    -->
+    <person id="001">
+        <name>张三</name>
+        <age>23</age>
+    </person>
+
+
+</persons>

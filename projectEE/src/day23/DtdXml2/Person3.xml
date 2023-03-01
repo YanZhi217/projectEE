@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+<!DOCTYPE persons PUBLIC "dtd文件的名称" "dtd文档的URL">
+dtd约束的第三种方式，从网络引入约束，上面为语法格式
+-->
+
+<persons>
+    <person>
+        <name>张三</name>
+        <age>23</age>
+    </person>
+
+</persons>
