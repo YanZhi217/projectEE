@@ -7,7 +7,7 @@ import java.sql.Statement;
 
 public class Demo2 {
     /*
-        JDBC快速入门
+        JDBC API
     */
     public static void main(String[] args) throws SQLException, ClassNotFoundException {
         //1. 注册驱动
@@ -23,7 +23,7 @@ public class Demo2 {
         //配置useSSL = false参数，禁用安全连接方式，解决警告提示
         String username = "root";
         String password = "1234";
-        //DriverManager()驱动管理类,注册驱动，获取数据库连接,是一个工具类，里面有许多静态方法
+        //DriverManager()驱动管理类,注册驱动，获取数据库连接,是一个工具类，里面有许多静态方法,1、注册驱动,2、获取数据库连接
         Connection conn = DriverManager.getConnection(url, username, password);
 
         //3. 定义sql
