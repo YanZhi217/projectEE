@@ -1,4 +1,4 @@
-package day27_JDBC.JDBC.Demo6;
+package day27_JDBC.JDBC1.Demo6;
 
 import org.junit.Test;
 

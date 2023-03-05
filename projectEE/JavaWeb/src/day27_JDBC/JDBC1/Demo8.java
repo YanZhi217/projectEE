@@ -1,13 +1,17 @@
-package day27_JDBC.JDBC;
+package day27_JDBC.JDBC1;
 
 import org.junit.Test;
 
 import java.sql.*;
-import java.util.Date;
 
 /**
- * API详解：PreparedStatement
- *防止SQL注入
+ * API详解：PreparedStatement 原理
+ * 好处：预编译SQL，性能更高
+ *防止SQL注入，将敏感字符进行转义
+ * PrepareStatement预编译开启：useServerPrepStmts=true
+ * 在获取PrepareStatement对象时，将sql语句发送给服务器进行检查，编译，（这些步骤很消耗时间）
+ * 执行时就不用再进行这些步骤了，速度更快
+ * 如果sql模板一样，则只需要进行一次检查，编译
  */
 public class Demo8 {
     @Test
@@ -67,7 +71,7 @@ public class Demo8 {
 
         // 接收用户输入 用户名和密码
         String name = "zhangsan";
-        String pwd = "' or '1' = '1";
+        String pwd = "123";
 
         // 定义sql
         String sql = "select * from tb_user where username = ? and password = ?";

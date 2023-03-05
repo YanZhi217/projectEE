@@ -1,14 +1,11 @@
-package day27_JDBC.JDBC;
+package day27_JDBC.JDBC1;
 
-import day27_JDBC.JDBC.Demo6.Account;
 import org.junit.Test;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * 用户登录

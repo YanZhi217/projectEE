@@ -1,4 +1,4 @@
-package day27_JDBC.JDBC;
+package day27_JDBC.JDBC1;
 
 import java.sql.*;
 
