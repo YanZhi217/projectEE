@@ -10,7 +10,7 @@ public class demo {
     }
 }
 
-//实现类不给反省的具体数据类型
+
 interface Genericity<E>{
     public abstract void method(E e);
 }
@@ -25,7 +25,7 @@ class GenericityImpl2 implements Genericity<Integer>{
 }
 
 
-
+//实现类不给泛型的具体数据类型
 class GenericityImpl1<E> implements Genericity<E>{
 
     @Override
