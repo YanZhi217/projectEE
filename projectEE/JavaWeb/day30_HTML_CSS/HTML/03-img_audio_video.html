@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图片音频视频</title>
+</head>
+<body>
+<!--
+  资源路径:
+    绝对路径：绝对路径
+    相对路径：相对位置关系
+        xxx/HTML/03-img_audio_html
+        xxx/HTML/a.jpg
+        ./a.jpg或者a.jpg
+
+        xxx/html/02-图片音频视频.html
+        xxx/html/img/a.jpg
+        ./img/a.jpg
+
+        xxx/html/02-图片音频视频.html
+        xxx/img/a.jpg
+        ../img/a.jpg
+  尺寸单位：
+    1.px:像素
+    2.百分比:占据整个网页页面的比例
+-->
+<img src="../img/a.jpg" width="389" height="500">
+<br>
+<!--controls,显示播放控件,仅仅支持MP3,WAV,OGG格式-->
+<audio src="../img/b.mp3" controls="controls"></audio>
+<br>
+<!--仅仅支持MP4,WebM,OGG格式-->
+<video src="../img/c.mp4" controls="controls" width="1920" height="1080"></video>
+
+</body>
+</html>

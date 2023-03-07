@@ -4,6 +4,9 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <!--
     namespace:名称空间
+        1.定义与SQL映射文件同名的Mapper接口，并且将Mapper接口和SQL映射文件放置在同一目录下
+        2.设置SQL映射文件的namespace属性为Mapper接口全限定名
+        3.在 Mapper 接口中定义方法，方法名就是SQL映射文件中sql语句的id，并保持参数类型和返回值类型一致
 -->
 <mapper namespace="Mapper.BrandMapper">
     <!--通过起别名的方式，在mybatis-config.xml中配置
@@ -13,22 +16,30 @@
     使resultType="User"而不用="Pojo.User"
     不区分大小写，user也可以
     -->
-    <!--statement-->
 
     <!--
-        数据库表的字段名称 和 实体类的属性名称 不一样，则不能自动封装数据
-            解决：
-                * 起别名 对不一样的列名和实体类属性名相同
-                    * 缺点，每次查询都要起一次别名
-                        * sql片段 定义sql片段，并引用
-                            *缺点 不灵活
-                * resultMap id指主键的映射，result指其他列的映射，column指数据表列名，property指实体类属性名，将数据表与实体类映射
-                    * 定义resultMap标签，在select标签中使用resultMap属性替换resultType属性
+       数据库表的字段名称 和 实体类的属性名称 不一样，则不能自动封装数据
+        解决：
+            * 起别名 对不一样的列名和实体类属性名相同
+                * 缺点，每次查询都要起一次别名
+                    * sql片段 定义sql片段，并引用
+                        *缺点 不灵活
+            * resultMap id指主键的映射，result指其他列的映射，column指数据表列名，property指实体类属性名，将数据表与实体类映射
+                * 定义resultMap标签，在select标签中使用resultMap属性替换resultType属性
     -->
+    <!--有问题,数据库表的字段名称 和 实体类的属性名称 不一样，则不能自动封装数据-->
+    <!--statement-->
     <!--<select id="selectAll" resultType="Brand">
         SELECT * FROM tb_brand;
     </select>-->
 
+    <!--通过resultMap来解决不能自动封装数据的问题·-->
+    <resultMap id="brandResultMap" type="Brand">
+        <result column="brand_name" property="brandName" />
+        <result column="company_name" property="companyName" />
+    </resultMap>
+
+    <!--通过起别名来解决不能自动封装数据的问题-->
     <!--<sql id="brand_column">
         id, brand_name AS brandName, company_name AS companyName, ordered, description, status
     </sql>
@@ -37,11 +48,9 @@
             <include refid="brand_column"/>
             FROM tb_brand;
     </select>-->
+
+
     <!--查询所有-->
-    <resultMap id="brandResultMap" type="Brand">
-        <result column="brand_name" property="brandName" />
-        <result column="company_name" property="companyName" />
-    </resultMap>
     <select id="selectAll" resultMap="brandResultMap">
         SELECT * FROM tb_brand;
     </select>

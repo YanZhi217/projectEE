@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单项标签</title>
+</head>
+<body>
+<!--
+  <form>定义表单
+  <input>定义表单项,通过type属性控制输入形式
+  <label>为表单项定义标注
+  <select>定义下拉列表
+  <option>定义下拉列表的列表项
+  <textarea>定义文本域
+
+  type取值
+    text,默认值，定义单行的输入字段
+    password,定义密码字段
+    radio,定义单选按钮
+    checkbox,定义复选框
+    file,定义文件上传按钮
+    hidden,定义隐藏的输入字段
+    submit,定义提交按钮，提交按钮会把表单数据发送到服务器
+    reset,定义重置按钮，重置按钮会清楚表单中的所有数据
+    button,定义可点击的按钮
+-->
+<form action="#" method="post">
+  <input type="hidden" name="id" value="123">
+
+  <label for="username">用户名：</label>
+  <input type="text" name="username" id="username"><br>
+
+  <label for="password">密码：</label>
+  <input type="password" name="password" id="password"><br>
+
+  性别：
+  <input type="radio" name="gender" value="1" id="male"> <label for="male">男</label>
+  <input type="radio" name="gender" value="2" id="female"> <label for="female">女</label>
+  <br>
+
+  爱好：
+  <input type="checkbox" name="hobby" value="1"> 旅游
+  <input type="checkbox" name="hobby" value="2"> 电影
+  <input type="checkbox" name="hobby" value="3"> 游戏
+  <br>
+
+  头像：
+  <input type="file"><br>
+
+  城市:
+  <select name="city">
+    <option>北京</option>
+    <option value="shanghai">上海</option>
+    <option>广州</option>
+  </select>
+  <br>
+
+  个人描述：
+  <textarea cols="20" rows="5" name="desc"></textarea>
+  <br>
+  <br>
+  <input type="submit" value="免费注册">
+  <input type="reset" value="重置">
+  <input type="button" value="一个按钮">
+
+</form>
+
+</body>
+</html>

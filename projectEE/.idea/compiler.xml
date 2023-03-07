@@ -16,6 +16,7 @@
       <module name="day28_Maven" target="12" />
       <module name="day28_maven-project" target="1.8" />
       <module name="day28_MavenDemo" target="12" />
+      <module name="day30_HTML_CSS" target="12" />
     </bytecodeTargetLevel>
   </component>
 </project>

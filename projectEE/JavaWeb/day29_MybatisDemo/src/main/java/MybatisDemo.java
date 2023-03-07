@@ -9,7 +9,7 @@ import java.io.InputStream;
 import java.util.List;
 
 /**
- * mybatis代理开发
+ * mybatis 快速入门
  */
 public class MybatisDemo {
     public static void main(String[] args) throws IOException {
