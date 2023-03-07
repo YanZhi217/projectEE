@@ -78,6 +78,6 @@ public class Brand {
                 ", ordered=" + ordered +
                 ", description='" + description + '\'' +
                 ", status=" + status +
-                '}';
+                '}' + "\n";
     }
 }

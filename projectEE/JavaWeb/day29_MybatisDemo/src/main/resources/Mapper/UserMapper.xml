@@ -21,4 +21,12 @@
     <select id="selectById" resultType="User">
         SELECT * FROM tb_user WHERE id = #{id};
     </select>
+
+    <select id="select" resultType="User">
+        select *
+        from tb_user
+        where
+            username = #{arg0}
+          and password = #{param2}
+    </select>
 </mapper>

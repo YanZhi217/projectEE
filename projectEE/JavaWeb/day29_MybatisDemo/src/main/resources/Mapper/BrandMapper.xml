@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--
+    namespace:名称空间
+-->
+<mapper namespace="Mapper.BrandMapper">
+    <!--通过起别名的方式，在mybatis-config.xml中配置
+    <typeAliases>
+        <package name="Pojo"/>
+    </typeAliases>
+    使resultType="User"而不用="Pojo.User"
+    不区分大小写，user也可以
+    -->
+    <!--statement-->
+
+    <!--
+        数据库表的字段名称 和 实体类的属性名称 不一样，则不能自动封装数据
+            解决：
+                * 起别名 对不一样的列名和实体类属性名相同
+                    * 缺点，每次查询都要起一次别名
+                        * sql片段 定义sql片段，并引用
+                            *缺点 不灵活
+                * resultMap id指主键的映射，result指其他列的映射，column指数据表列名，property指实体类属性名，将数据表与实体类映射
+                    * 定义resultMap标签，在select标签中使用resultMap属性替换resultType属性
+    -->
+    <!--<select id="selectAll" resultType="Brand">
+        SELECT * FROM tb_brand;
+    </select>-->
+
+    <!--<sql id="brand_column">
+        id, brand_name AS brandName, company_name AS companyName, ordered, description, status
+    </sql>
+    <select id="selectAll" resultType="Brand">
+        SELECT
+            <include refid="brand_column"/>
+            FROM tb_brand;
+    </select>-->
+    <!--查询所有-->
+    <resultMap id="brandResultMap" type="Brand">
+        <result column="brand_name" property="brandName" />
+        <result column="company_name" property="companyName" />
+    </resultMap>
+    <select id="selectAll" resultMap="brandResultMap">
+        SELECT * FROM tb_brand;
+    </select>
+
+
+
+    <!--
+        mybatis中有两个参数占位符
+            #{} 会将其替换为 ? 为了防止SQL注入
+            ${} 会直接拼接sql语句，存在SQl注入问题
+        使用时机
+            参数传递的时候使用#{}
+            表明或者列名不固定的时候使用${},会存在SQL注入问题
+        参数类型，接受的id参数的类型，用parameterType="XXX",可以省略
+        特殊字符处理，例如可以使用>号，但不能使用<号
+            1.使用转义字符 < = &lt;
+            2.CDATA区 <![CDATA [ XXXXXXXXX ]]>
+    -->
+    <!--根据id查看详情-->
+    <select id="selectById" resultMap="brandResultMap">
+        SELECT * FROM tb_brand WHERE id = #{id};
+    </select>
+
+
+
+    <!--条件查询
+    <select id="selectByCondition" resultMap="brandResultMap">
+        SELECT *
+        FROM tb_brand
+        WHERE status = #{status}
+            AND company_name LIKE #{companyName}
+            AND brand_name LIKE #{brandName}
+    </select>-->
+
+
+
+    <!--
+        动态条件查询
+            if 条件判断
+                test 逻辑表达式
+            问题，可能造成WHERE AND 的MySQL语法错误
+                解决
+                    恒等式
+                    where标签
+    -->
+    <!--<select id="selectByCondition" resultMap="brandResultMap">
+        SELECT *
+        FROM tb_brand
+        WHERE   1 = 1
+            <if test="status != null" >
+                AND status = #{status}
+            </if>
+            <if test="companyName != null and companyName != ''">
+                AND company_name LIKE #{companyName}
+            </if>
+            <if test="brandName != null and brandName != ''">
+                AND brand_name LIKE #{brandName}
+            </if>
+    </select>-->
+
+    <select id="selectByCondition" resultMap="brandResultMap">
+        SELECT *
+        FROM tb_brand
+        <where>
+            <if test="status != null" >
+                AND status = #{status}
+            </if>
+            <if test="companyName != null and companyName != ''">
+                AND company_name LIKE #{companyName}
+            </if>
+            <if test="brandName != null and brandName != ''">
+                AND brand_name LIKE #{brandName};
+            </if>
+        </where>
+
+    </select>
+
+
+
+    <!--单条件动态查询-->
+    <select id="selectByConditionSingle" resultMap="brandResultMap">
+        SELECT *
+        FROM tb_brand
+        <where>
+            <choose><!-- 相当于switch -->
+                <when test="status != null"><!--相当于case-->
+                    AND status = #{status}
+                </when>
+                <when test="companyName != null and companyName != ''">
+                    AND company_name LIKE #{companyName}
+                </when>
+                <when test="brandName != null and brandName != ''">
+                    AND brand_name LIKE #{brandName};
+                </when>
+                <!--<otherwise>1 = 1</otherwise>相当于default-->
+            </choose>
+        </where>
+    </select>
+
+
+
+    <!--添加-->
+    <!--返回所添加数据的主键,用于有关联数据的操作-->
+    <!--<insert id="add" useGeneratedKeys="true" keyProperty="id">-->
+    <insert id="add">
+        INSERT INTO tb_brand(brand_name, company_name, ordered, description, status)
+        VALUES(#{brandName},#{companyName},#{ordered},#{description},#{status});
+    </insert>
+
+
+
+    <!--修改全部字段
+    <update id="update">
+        UPDATE tb_brand SET
+            brand_name = #{brandName},
+            company_name = #{companyName},
+            ordered = #{ordered},
+            description = #{description},
+            status = #{status}
+        WHERE id = #{id};
+    </update>-->
+
+
+
+    <!--动态修改字段-->
+    <update id="update">
+        update tb_brand
+        <set>
+            <if test="brandName != null and brandName != ''">
+                brand_name = #{brandName},
+            </if>
+            <if test="companyName != null and companyName != ''">
+                company_name = #{companyName},
+            </if>
+            <if test="ordered != null">
+                ordered = #{ordered},
+            </if>
+            <if test="description != null and description != ''">
+                description = #{description},
+            </if>
+            <if test="status != null">
+                status = #{status}
+            </if>
+        </set>
+        where id = #{id};
+    </update>
+
+
+
+    <!--根据id删除一个-->
+    <delete id="deleteById">
+        delete from tb_brand where id = #{id};
+    </delete>
+
+
+
+    <!--
+    批量删除
+        mybatis会将数组参数，封装为一个Map集合。
+            * 默认：array = 数组
+            * 使用@Param注解改变map集合的默认key的名称
+    -->
+    <delete id="deleteByIds">
+        delete from tb_brand where id
+        in
+        /*默认array为数组，如果想要用定义的数组名，则需要添加@param注解*/
+        /*foreach相当于for遍历，item是获取到的元素,seperator是分隔符，open是遍历前拼接的内容，close是遍历后拼接的内容*/
+        <foreach collection="array" item="id" separator="," open="(" close=")">
+            #{id}
+        </foreach>
+        ;
+    </delete>
+</mapper>

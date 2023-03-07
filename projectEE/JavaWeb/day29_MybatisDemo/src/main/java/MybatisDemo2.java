@@ -14,7 +14,7 @@ import java.util.List;
  */
 public class MybatisDemo2 {
     public static void main(String[] args) throws IOException {
-        //加载mybatis的核心配置文件,获取sqlSessionFactory
+        //加载mybatis的核心配置文件,获取SqlSessionFactory
         String resource = "mybatis_config.xml";
         InputStream inputStream = Resources.getResourceAsStream(resource);
         SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
