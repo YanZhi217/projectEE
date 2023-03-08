@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+  JavaScript 引入方式就是 HTML 和 JavaScript 的结合方式。JavaScript引入方式有两种：
+  内部脚本：将 JS代码定义在HTML页面中
+  外部脚本：将 JS代码定义在外部 JS文件中，然后引入到 HTML页面中
+  内部脚本
+  在 HTML 中，JavaScript 代码必须位于 <script> 与 </script> 标签之间
+  alert(数据) 是 JavaScript 的一个方法，作用是将参数数据以浏览器弹框的形式输出出来。
+  一般把脚本置于 元素的底部，可改善显示速度,因为浏览器在加载页面的时候会从上往下进行加载并解析。 我们应该让用户看到页面内容，然后再展示动态的效果。
+  外部脚本
+  第一步：定义外部 js 文件。如定义名为 demo.js的文件
+  第二步：在页面中引入外部的js文件
+  在页面使用 script 标签中使用 src 属性指定 js 文件的 URL 路径。
+  外部脚本不能包含 <script> 标签
+  在js文件中直接写 js 代码即可，不要在 js文件 中写 script 标签
+  <script> 标签不能自闭合
+  在页面中引入外部js文件时，不能写成 <script src="../js/demo.js" />。
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    alert("hello js1");
+</script>
+
+<script src="../js/demo.js"></script>
+
+</body>
+</html>

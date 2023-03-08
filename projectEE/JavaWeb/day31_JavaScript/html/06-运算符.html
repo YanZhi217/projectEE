@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+JavaScript 提供了如下的运算符。大部分和 Java语言 都是一样的，不同的是 JS 关系运算符中的== 和 ===，一会我们只演示这两个的区别，其他运算符将不做演示
+一元运算符：++，-
+算术运算符：+，-，*，/，%
+赋值运算符：=，+=，-=…
+关系运算符：>，<，>=，<=，!=，==，===…
+逻辑运算符：&&，||，!
+三元运算符：条件表达式 ? true_value : false_value
+==：
+1. 判断类型是否一样，如果不一样，则进行类型转换
+2. 再去比较其值
+===：js 中的全等于
+1. 判断类型是否一样，如果不一样，直接返回false
+ 2. 再去比较其值
+接下来我们来详细的讲解一下 JavaScript 中的类型转换。
+其他类型转为number
+string 转换为 number 类型：按照字符串的字面值，转为数字。如果字面值不是数字，则转为NaN
+将 string 转换为 number 有两种方式：
+使用 + 正号运算符：
+使用parseInt() 函数(方法)：
+建议使用parseInt() 函数进行转换。
+boolean 转换为 number 类型：true 转为1，false转为0
+其他类型转为boolean
+number 类型转换为 boolean 类型：0和NaN转为false，其他的数字转为true
+string 类型转换为 boolean 类型：空字符串转为false，其他的字符串转为true
+null类型转换为 boolean 类型是 false
+undefined 转换为 boolean 类型是 false
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>运算符</title>
+</head>
+<body>
+
+<script>
+  /*
+      ==:
+          1. 判断类型是否一样，如果不一样，则进行类型转换
+          2. 再去比较其值
+      ===:全等于
+          1. 判断类型是否一样，如果不一样，直接返回false
+          2. 再去比较其值
+   */
+  var age1 = 20;
+  var age2 = "20";
+
+  // alert(age1 == age2);// true
+  // alert(age1 === age2);// false
+
+  /*
+      类型转换：
+          * 其他类型转为number：
+              1. string: 按照字符串的字面值，转为数字.如果字面值不是数字，则转为NaN。一般使用parseInt
+              2. boolean: true 转为1，false转为0
+          * 其他类型转为boolean：
+              1. number:0和NaN转为false，其他的数字转为true
+              2. string:空字符串转为false，其他的字符串转为true
+              3. null:false
+              4. undefined:false
+   */
+  // var str = +"20";
+  /*var str = "20";
+  alert(parseInt(str) + 1);*/
+
+  /*
+      var flag = +false;
+      alert(flag);*/
+  // var flag = 3;
+  // var flag = "";
+  /*   var flag = undefined;
+
+     if(flag){
+         alert("转为true");
+     }else {
+         alert("转为false");
+     }*/
+
+  var str = "abc";
+
+  //健壮性判断
+  //if(str != null && str.length > 0){
+  if(str){
+    alert("转为true");
+  }else {
+    alert("转为false");
+  }
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+JavaScript 中用 var 关键字（variable 的缩写）来声明变量。格式
+var 变量名 = 数据值;
+而在JavaScript 是一门弱类型语言，变量可以存放不同类型的值；如下在定义变量时赋值为数字数据，还可以将变量的值改为字符串类型的数
+js 中的变量名命名也有如下规则，和java语言基本都相同
+组成字符可以是任何字母、数字、下划线（_）或美元符号（$）
+数字不能开头
+建议使用驼峰命名
+JavaScript 中
+var 关键字有点特殊，有以下地方和其他语言不一样
+作用域：全局变量
+变量可以重复定义
+针对如上的问题，
+ECMAScript 6 新增了
+let关键字来定义变量。它的用法类似于var,但是所声明的变量,只在let关键字所在的代码块内有效，且不允许重复声明。
+ECMAScript 6 新增了 const关键字，用来声明一个只读的常量。一旦声明，常量的值就不能改变。
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>变量</title>
+</head>
+<body>
+
+<script>
+  var age = 10;
+  age = "age";
+  windows.alert(age);
+
+  {
+    var age2 = 10;
+    var age2 = 20;
+  }
+  alert(age2);
+
+  {
+    let age3 = 30;
+    //let age3 = 30;
+  }
+  alert(age3);//将会报错
+
+  const PI = 3.14;
+  //PI = 3.1415;
+</script>
+
+</body>
+</html>

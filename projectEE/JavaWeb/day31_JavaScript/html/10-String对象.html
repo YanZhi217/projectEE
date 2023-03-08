@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+String对象的创建方式有两种
+方式1：
+var 变量名 = new String(s);
+方式2：
+var 变量名 = "数组";
+String对象提供了很多属性，下面给大家列举了一个属性 length ，该属性是用于动态的获取字符串的长度
+String对象提供了很多函数（方法），下面给大家列举了两个方法。
+charAt(),返回指定位置的字符,indexOf,检索字符串
+String对象还有一个函数
+trim() ，该方法在文档中没有体现，但是所有的浏览器都支持；它是用来去掉字符串两端的空格。
+用户在输入用户名和密码时，可能会习惯的输入一些空格，这样在我们后端程序中判断用户名和密码是否正确，结果肯定是失败。
+所以我们一般都会对用户输入的字符串数据进行去除前后空格的操作。
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+  //方式一
+  var str1 = new String("abc");
+  //方式二
+  var str2 = "abc";
+  var str3 = 'abc';
+
+  //length
+  // alert(str3.length);
+
+  // trim():去除字符串前后两端的空白字符
+
+  var str4 = '  abc   ';
+
+  alert(1 + str4.trim() + 1);
+
+</script>
+
+</body>
+</html>

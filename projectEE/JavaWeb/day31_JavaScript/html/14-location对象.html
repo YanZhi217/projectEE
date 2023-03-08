@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+History 对象是 JavaScript 对历史记录进行封装的对象。
+History 对象的获取
+使用 window.history获取，其中window. 可以省略
+History 对象的函数:back()加载history的前一个URL，forword()加载history的后一个URL
+当我们点击向左的箭头，就跳转到前一个访问的页面，这就是 back() 函数的作用；当我们点击向右的箭头，就跳转到
+下一个访问的页面，这就是 forward() 函数的作用。
+
+Location 对象是 JavaScript 对地址栏封装的对象。可以通过操作该对象，跳转到任意页面。
+获取Location对象
+使用 window.location获取，其中window. 可以省略
+Location对象提供了很对属性。以后常用的只有一个属性 href,设置或返回完整的URL
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>location对象</title>
+</head>
+<body>
+
+<script>
+  /*
+
+      alert("要跳转了");
+      location.href = "https://www.baidu.com";
+
+  */
+
+
+  //3秒跳转到首页
+
+  document.write("3秒跳转到首页...");
+  setTimeout(function (){
+    location.href = "https://www.baidu.com"
+  },3000);
+
+</script>
+
+</body>
+</html>

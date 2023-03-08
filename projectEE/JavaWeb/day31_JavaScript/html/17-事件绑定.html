@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+HTML 事件是发生在 HTML 元素上的“事情”。比如：页面上的 事件监听是JavaScript 可以在事件被侦测到时按钮被点击、鼠标移动到元素之上、按下键盘按键等都是事件。
+执行一段逻辑代码。例如下图当我们点击开灯按钮，就需要通过js代码实现替换图片
+当我们输入了用户名,光标离开输入框，就需要通过js代码对输入的内容进行校验，没通过校验就在输入框后提示用户名格式有误
+
+JavaScript 提供了两种事件绑定方式：
+方式一：通过 HTML标签中的事件属性进行绑定
+如下面代码，有一个按钮元素，我们是在该标签上定义事件属性。在事件属性中绑定函数。
+onclick就是单击事件的onclick='on（）'表示该点击事件绑定了一个名为on() 的函数
+<input type="button" onclick='on()’>
+下面是点击事件绑定的 on()函数
+function on(){
+alert("我被点了");
+}
+
+方式二：通过 DOM 元素属性绑定
+如下面代码是按钮标签，在该标签上我们并没有使用事件属性，绑定事件的操作需要在 js 代码中实现
+<input type="button" id="btn">
+下面 js 代码是获取了id="btn"的元素对象，然后将onclick 作为该对象的属性，并且绑定匿名函数。该函数是在事件触发后自动执行
+document.getElementById("btn").onclick = function (){
+alert("我被点了");
+}
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>事件绑定</title>
+</head>
+<body>
+
+<input type="button" value="点我" onclick="on()"> <br>
+<input type="button" value="再点我" id="btn">
+
+<script>
+
+  function on(){
+    alert("我被点了");
+  }
+
+
+  document.getElementById("btn").onclick = function (){
+    alert("我又被点了");
+  }
+
+</script>
+
+</body>
+</html>

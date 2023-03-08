@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+  在 JavaScript 中自定义对象特别简单，下面就是自定义对象的格式：
+ var 对象名称 = {
+属性名称1:属性值1,
+属性名称2:属性值2,
+ ...,
+函数名称:function (形参列表){},
+ ...
+ };
+
+ 调用属性的格式：
+对象名.属性名
+
+调用函数的格式：
+对象名.函数名()
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>自定义对象</title>
+</head>
+<body>
+
+<script>
+
+
+  var person = {
+    name : "zhangsan",
+    age : 23,
+    eat: function (){
+      alert("干饭~");
+    }
+
+  };
+
+
+  alert(person.name);
+  alert(person.age);
+
+  person.eat();
+
+
+
+</script>
+
+</body>
+</html>
