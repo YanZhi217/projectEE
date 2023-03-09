@@ -9,7 +9,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="day32_Servlet" />
+        <module name="day32_TomcatDemo2" />
         <module name="day29_MybatisDemo" />
+        <module name="day32_TomcatDemo3" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -17,6 +20,7 @@
       <module name="day28_maven-project" target="1.8" />
       <module name="day28_MavenDemo" target="12" />
       <module name="day30_HTML_CSS" target="12" />
+      <module name="day32_TomcatDemo1" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>

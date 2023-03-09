@@ -1,11 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/JavaWeb/day32_Servlet" />
+    <file type="web" url="file://$PROJECT_DIR$/JavaWeb/day32_TomcatDemo1" />
+    <file type="web" url="file://$PROJECT_DIR$/JavaWeb/day32_TomcatDemo2" />
+    <file type="web" url="file://$PROJECT_DIR$/JavaWeb/day32_TomcatDemo3" />
+  </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/JavaWeb/MavenDemo/pom.xml" />
         <option value="$PROJECT_DIR$/JavaWeb/day29_MybatisDemo/pom.xml" />
+        <option value="$PROJECT_DIR$/JavaWeb/tomcat-demo1/pom.xml" />
+        <option value="$PROJECT_DIR$/JavaWeb/day32_TomcatDemo2/pom.xml" />
+        <option value="$PROJECT_DIR$/JavaWeb/day32_TomcatDemo3/pom.xml" />
+        <option value="$PROJECT_DIR$/JavaWeb/day32_Servlet/pom.xml" />
       </list>
     </option>
   </component>
