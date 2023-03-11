@@ -7,6 +7,7 @@
     <file type="web" url="file://$PROJECT_DIR$/JavaWeb/day32_TomcatDemo2" />
     <file type="web" url="file://$PROJECT_DIR$/JavaWeb/day32_TomcatDemo3" />
     <file type="web" url="file://$PROJECT_DIR$/JavaWeb/day33_RequestDemo" />
+    <file type="web" url="file://$PROJECT_DIR$/JavaWeb/day34_JSP" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
@@ -18,6 +19,7 @@
         <option value="$PROJECT_DIR$/JavaWeb/day32_TomcatDemo3/pom.xml" />
         <option value="$PROJECT_DIR$/JavaWeb/day32_Servlet/pom.xml" />
         <option value="$PROJECT_DIR$/JavaWeb/day33_RequestDemo/pom.xml" />
+        <option value="$PROJECT_DIR$/JavaWeb/day34_JSP/pom.xml" />
       </list>
     </option>
   </component>

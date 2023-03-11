@@ -1,18 +1,16 @@
 package web;
 
 import mapper.UserMapper;
-import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
-import org.apache.ibatis.session.SqlSessionFactoryBuilder;
-import org.apache.ibatis.session.defaults.DefaultSqlSessionFactory;
 import pojo.User;
 
-import javax.servlet.*;
-import javax.servlet.http.*;
-import javax.servlet.annotation.*;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.io.InputStream;
 
 @WebServlet("/registerServlet")
 public class registerServlet extends HttpServlet {
@@ -42,14 +40,14 @@ public class registerServlet extends HttpServlet {
         User u = userMapper.selectByUsername(username);
 
         //判断用户对象是否为null
-        if(u == null){
+        if (u == null) {
             //用户名不存在,添加用户
             userMapper.add(user);
             //提交事务
             sqlSession.commit();
             //释放资源
             sqlSession.close();
-        }else{
+        } else {
             //用户名存在，给出提示
             //设置相应的数据格式以及编码
             response.setContentType("text/html;charset=utf-8");
