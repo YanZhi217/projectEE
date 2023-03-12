@@ -16,6 +16,7 @@
         <module name="day32_TomcatDemo2" />
         <module name="day34_JSP" />
         <module name="day34_BrandDemo" />
+        <module name="day35_Cookie" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
