@@ -1,9 +1,6 @@
 package mapper;
 
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.ResultMap;
-import org.apache.ibatis.annotations.Select;
-import org.apache.ibatis.annotations.Update;
+import org.apache.ibatis.annotations.*;
 import pojo.Brand;
 
 import java.util.List;
@@ -29,4 +26,8 @@ public interface BrandMapper {
             "description = #{description},status = #{status} WHERE id = #{id}")
     @ResultMap("brandResultMapper")
     void update(Brand brand);
+
+    //删除
+    @Delete("DELETE FROM tb_brand WHERE id=#{id}")
+    void delete(int id);
 }
