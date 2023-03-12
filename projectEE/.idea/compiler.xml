@@ -10,11 +10,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="day32_Servlet" />
-        <module name="day32_TomcatDemo2" />
         <module name="day29_MybatisDemo" />
-        <module name="day34_JSP" />
         <module name="day33_RequestDemo" />
         <module name="day32_TomcatDemo3" />
+        <module name="day32_TomcatDemo2" />
+        <module name="day34_JSP" />
+        <module name="day34_BrandDemo" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
