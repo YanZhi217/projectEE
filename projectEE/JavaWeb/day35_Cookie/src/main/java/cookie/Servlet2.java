@@ -4,6 +4,8 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
+import java.net.URLDecoder;
+import java.nio.charset.StandardCharsets;
 
 @WebServlet("/Servlet2")
 public class Servlet2 extends HttpServlet {
@@ -18,6 +20,8 @@ public class Servlet2 extends HttpServlet {
             String name = cookie.getName();
             if("username".equals(name)) {
                 String value = cookie.getValue();
+                //URL解码
+                value = URLDecoder.decode(value, StandardCharsets.UTF_8);
                 System.out.println(name + ":" + value);
                 break;
             }
