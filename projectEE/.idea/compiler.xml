@@ -14,7 +14,9 @@
         <module name="day33_RequestDemo" />
         <module name="day32_TomcatDemo3" />
         <module name="day32_TomcatDemo2" />
+        <module name="day36_AJAX" />
         <module name="day34_JSP" />
+        <module name="day36_Filter" />
         <module name="day34_BrandDemo" />
         <module name="day35_Cookie" />
       </profile>

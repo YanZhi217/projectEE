@@ -42,4 +42,16 @@ public class UserService {
         sqlSession.close();;
         return u == null;
     }
+
+    //AJAX判断用户名是否存在
+    public Boolean SelectUser(String username){
+        //获取sqlSession
+        SqlSession sqlSession = factory.openSession();
+        //获取UserMapper
+        UserMapper mapper = sqlSession.getMapper(UserMapper.class);
+        //调用方法
+        //判断用户名是否存在
+        User u = mapper.selectByUsername(username);
+        return u != null;
+    }
 }

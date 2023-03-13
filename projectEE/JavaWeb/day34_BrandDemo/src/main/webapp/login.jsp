@@ -26,7 +26,7 @@
     <p>Remember:<input id="remember" name="remember"  value="1" type="checkbox"></p>
     <div id="subDiv">
       <input type="submit" class="button" value="login up">
-      <input type="reset" class="button" value="reset">&nbsp;&nbsp;&nbsp;
+      <input type="reset" class="button" value="reset">&nbsp;
       <a href="register.jsp">没有账号？</a>
     </div>
   </form>
