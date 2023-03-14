@@ -86,6 +86,16 @@ public class Brand {
         this.status = status;
     }
 
+    //逻辑视图
+    public String getStatusStr() {
+
+        if(this.status == 1){
+            return "启用";
+        }
+
+        return "禁用";
+    }
+
     @Override
     public String toString() {
         return "Brand{" +

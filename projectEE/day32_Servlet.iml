@@ -10,8 +10,8 @@
           <root url="file://$MODULE_DIR$/JavaWeb/day32_Servlet/src/main/webapp" relative="/" />
         </webroots>
         <sourceRoots>
-          <root url="file://$MODULE_DIR$/JavaWeb/day32_Servlet/src/main/java" />
           <root url="file://$MODULE_DIR$/JavaWeb/day32_Servlet/src/main/resources" />
+          <root url="file://$MODULE_DIR$/JavaWeb/day32_Servlet/src/main/java" />
           <root url="file://$MODULE_DIR$/JavaWeb/day32_Servlet/target/generated-sources/annotations" />
         </sourceRoots>
       </configuration>

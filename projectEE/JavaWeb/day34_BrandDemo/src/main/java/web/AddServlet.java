@@ -35,6 +35,9 @@ public class AddServlet extends HttpServlet {
         //转发到查询所有Servlet
         request.getRequestDispatcher("/SelectAllServlet").forward(request,response);*/
 
+        //1. 接收数据,request.getParameter 不能接收json的数据
+        /* String brandName = request.getParameter("brandName");
+        System.out.println(brandName);*/
         //获取请求体数据
         BufferedReader br = request.getReader();
         String params = br.readLine();

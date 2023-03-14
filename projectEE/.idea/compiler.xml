@@ -19,6 +19,7 @@
         <module name="day36_Filter" />
         <module name="day34_BrandDemo" />
         <module name="day35_Cookie" />
+        <module name="day37_Vue" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
