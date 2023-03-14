@@ -1,6 +1,7 @@
 package web.Filter;
 
 import javax.servlet.*;
+import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
@@ -9,6 +10,7 @@ import java.io.IOException;
 /*
     登陆验证的过滤器
 */
+@WebFilter("/*")
 public class LoginFilter implements Filter {
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
@@ -26,6 +28,7 @@ public class LoginFilter implements Filter {
         for (String s : urls) {
             if(url.contains(s)){
                 //找到了
+                //放行
                 filterChain.doFilter(servletRequest,servletResponse);
                 return;
             }
@@ -44,7 +47,7 @@ public class LoginFilter implements Filter {
             //没有登陆
             //存储提示信息,跳转到登录页面
             req.setAttribute("login_msg","您尚未登陆");
-            req.getRequestDispatcher("login_msg").forward(req,servletResponse);
+            req.getRequestDispatcher("/login.jsp").forward(req,servletResponse);
         }
 
     }

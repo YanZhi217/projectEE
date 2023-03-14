@@ -25,7 +25,7 @@
 
     </tr>
 
-
+    <%--jsp形式--%>
     <c:forEach items="${brands}" var="brand" varStatus="status">
         <tr align="center">
             <%--<td>${brand.id}</td>--%>
@@ -53,7 +53,6 @@
     document.getElementById("add").onclick = function (){
         location.href = "/day34_BrandDemo/addBrand.jsp";
     }
-
 </script>
 </body>
 </html>

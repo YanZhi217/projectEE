@@ -1,5 +1,6 @@
 package web;
 
+import com.alibaba.fastjson.JSON;
 import pojo.Brand;
 import service.BrandService;
 
@@ -18,11 +19,20 @@ public class SelectAllServlet extends HttpServlet {
         //调用BrandService完成查询
         List<Brand> brands = brandService.selectAll();
 
-        //存入request域中
+        /*//存入request域中
         request.setAttribute("brands",brands);
 
         //转发到brand.jsp
-        request.getRequestDispatcher("/brand.jsp").forward(request,response);
+        request.getRequestDispatcher("/brand.jsp").forward(request,response);*/
+
+        //2. 将集合转换为JSON数据   序列化
+        String jsonString = JSON.toJSONString(brands);
+
+        //3. 响应数据
+        response.setContentType("text/json;charset=utf-8");
+        response.getWriter().write(jsonString);
+        //转发到brand.html
+        //request.getRequestDispatcher("/brand.html").forward(request,response);
     }
 
     @Override

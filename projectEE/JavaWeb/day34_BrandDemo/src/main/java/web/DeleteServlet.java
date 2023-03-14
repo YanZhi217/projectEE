@@ -14,7 +14,8 @@ public class DeleteServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String id = request.getParameter("id");
         brandService.delete(Integer.parseInt(id));
-        request.getRequestDispatcher("/SelectAllServlet").forward(request,response);
+        //request.getRequestDispatcher("/SelectAllServlet").forward(request,response);
+        request.getRequestDispatcher("/brand.html").forward(request,response);
     }
 
     @Override

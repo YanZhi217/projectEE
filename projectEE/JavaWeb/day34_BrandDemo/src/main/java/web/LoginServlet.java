@@ -39,7 +39,9 @@ public class LoginServlet extends HttpServlet {
             session.setAttribute("user",user);
             //登陆成功,重定向跳转到查询所有的BrandServlet
             String contextPath = request.getContextPath();
-            response.sendRedirect(contextPath + "/SelectAllServlet");
+            //response.sendRedirect(contextPath + "/SelectAllServlet");
+            response.sendRedirect(contextPath + "/brand.html");
+
         }else{
             //登陆失败
             //存储错误信息到request

@@ -39,7 +39,8 @@ public class UpdateServlet extends HttpServlet {
         brandService.update(brand);
 
         //转发到查询所有Servlet
-        request.getRequestDispatcher("/SelectAllServlet").forward(request,response);
+        //request.getRequestDispatcher("/SelectAllServlet").forward(request,response);
+        request.getRequestDispatcher("/brand.html").forward(request,response);
     }
 
     @Override
