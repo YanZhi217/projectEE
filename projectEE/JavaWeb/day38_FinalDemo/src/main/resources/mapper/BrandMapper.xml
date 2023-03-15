@@ -8,10 +8,48 @@
         <result property="brandName" column="brand_name" />
         <result property="companyName" column="company_name" />
     </resultMap>
+
+    <!--删除单个-->
     <delete id="deleteByIds">
         DELETE FROM tb_brand WHERE
         <foreach collection="ids" item="id" separator="," open="id IN(" close=")">
             #{id}
         </foreach>
     </delete>
+
+    <!--分页条件查询-->
+    <!--WHERE brand_name = #{brand.brandName}-->
+    <select id="selectByPageAndCondition" resultMap="brandResultMap">
+        SELECT * FROM tb_brand
+        <where>
+            <if test="brand.brandName != null and brand.brandName != ''">
+                AND brand_name LIKE #{brand.brandName}
+            </if>
+
+            <if test="brand.companyName != null and brand.companyName != ''">
+                AND company_name LIKE #{brand.companyName}
+            </if>
+
+            <if test="brand.status != null">
+                AND status = #{brand.status}
+            </if>
+        </where>
+        LIMIT #{begin},#{size}
+    </select>
+
+    <!--条件总记录数-->
+    <select id="selectTotalCountByCondition" resultType="java.lang.Integer">
+        SELECT count(*) FROM tb_brand
+        <where>
+            <if test="brandName != null and brandName != ''">
+                AND brand_name LIKE #{brandName}
+            </if>
+            <if test="companyName != null and companyName != ''">
+                AND company_name LIKE #{companyName}
+            </if>
+            <if test="status != null">
+                AND status = #{status}
+            </if>
+        </where>
+    </select>
 </mapper>

@@ -29,11 +29,34 @@ public interface BrandMapper {
     /**
      * 修改brand
      */
-    @Update("UPDATE tb_brand SET brand_name=#{brandName},company_name=#{companyName},ordered=#{ordered},description=#{description},status=#{status} where id=#{id}")
+    @Update("UPDATE tb_brand SET brand_name=#{brandName},company_name=#{companyName},ordered=#{ordered}," +
+            "description=#{description},status=#{status} where id=#{id}")
     void updateById(Brand brand);
 
     /**
      * 批量删除
      */
     void deleteByIds(@Param("ids") int[] ids);
+
+    /**
+     * 分页查询
+     */
+    @Select("SELECT * FROM tb_brand LIMIT #{begin} , #{size}")
+    @ResultMap("brandResultMap")
+    List<Brand> selectByPage(@Param("begin") int begin,@Param("size") int size);
+    /**
+     * 查询总记录数
+     */
+    @Select("SELECT COUNT(*) FROM tb_brand")
+    //@ResultMap("brandResultMap")
+    int selectTotalCount();
+
+    /**
+     * 分页条件查询
+     */
+    List<Brand> selectByPageAndCondition(@Param("begin") int begin, @Param("size") int size, @Param("brand") Brand brand);
+    /**
+     * 条件查询总记录数
+     */
+    int selectTotalCountByCondition(Brand brand);
 }
