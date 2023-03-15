@@ -10,8 +10,8 @@
           <root url="file://$MODULE_DIR$/JavaWeb/day32_TomcatDemo2/src/main/webapp" relative="/" />
         </webroots>
         <sourceRoots>
-          <root url="file://$MODULE_DIR$/JavaWeb/day32_TomcatDemo2/src/main/resources" />
           <root url="file://$MODULE_DIR$/JavaWeb/day32_TomcatDemo2/src/main/java" />
+          <root url="file://$MODULE_DIR$/JavaWeb/day32_TomcatDemo2/src/main/resources" />
         </sourceRoots>
       </configuration>
     </facet>

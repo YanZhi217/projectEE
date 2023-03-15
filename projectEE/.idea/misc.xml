@@ -13,6 +13,7 @@
     <file type="web" url="file://$PROJECT_DIR$/JavaWeb/day36_AJAX" />
     <file type="web" url="file://$PROJECT_DIR$/JavaWeb/day36_Filter" />
     <file type="web" url="file://$PROJECT_DIR$/JavaWeb/day37_Vue" />
+    <file type="web" url="file://$PROJECT_DIR$/JavaWeb/day38_FinalDemo" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
@@ -31,6 +32,7 @@
         <option value="$PROJECT_DIR$/JavaWeb/day37_AJAX/pom.xml" />
         <option value="$PROJECT_DIR$/JavaWeb/day36_AJAX/pom.xml" />
         <option value="$PROJECT_DIR$/JavaWeb/day37_Vue/pom.xml" />
+        <option value="$PROJECT_DIR$/JavaWeb/day38_FinalDemo/pom.xml" />
       </list>
     </option>
   </component>

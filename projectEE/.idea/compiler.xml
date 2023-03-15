@@ -18,6 +18,7 @@
         <module name="day34_JSP" />
         <module name="day36_Filter" />
         <module name="day34_BrandDemo" />
+        <module name="day38_FinalDemo" />
         <module name="day35_Cookie" />
         <module name="day37_Vue" />
       </profile>
