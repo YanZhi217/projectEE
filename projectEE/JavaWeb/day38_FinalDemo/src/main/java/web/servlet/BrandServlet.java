@@ -44,4 +44,53 @@ public class BrandServlet extends BaseServlet{
         //响应成功标识
         resp.getWriter().write("success");
     }
+
+    /**
+     * 删除单个
+     */
+    public void delete(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        //获取id
+        String id = request.getParameter("id");
+
+        //2. 调用service删除
+        brandService.delete(Integer.parseInt(id));
+
+        //3. 响应成功的标识
+        response.getWriter().write("success");
+    }
+
+    /**
+     * 修改单个
+     */
+    public void updateById(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        //1. 接收品牌数据
+        BufferedReader br = request.getReader();
+        String params = br.readLine();//json字符串
+
+        //转为Brand对象
+        Brand brand = JSON.parseObject(params, Brand.class);
+
+        //2. 调用service添加
+        brandService.updateById(brand);
+
+        //3. 响应成功的标识
+        response.getWriter().write("success");
+    }
+
+    /**
+     * 批量删除
+     */
+    public void deleteByIds(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        //接收数据，[1,2,3,...]
+        BufferedReader br = req.getReader();
+        String params = br.readLine();//JSON字符串
+        //转为int[]数组
+        int[] ids = JSON.parseObject(params, int[].class);
+        //调用service添加
+        if(ids.length != 0){
+            brandService.deleteByIds(ids);
+        }
+        //响应成功标识
+        resp.getWriter().write("success");
+    }
 }
