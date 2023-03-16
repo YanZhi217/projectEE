@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
+       xmlns:context="http://www.springframework.org/schema/context"
+
+       xsi:schemaLocation="
+            http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd
+
+            http://www.springframework.org/schema/context
+            http://www.springframework.org/schema/context/spring-context.xsd
+
+">
+
+    <!--管理DruidDataSource对象
+    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+        <property name="url" value="jdbc:mysql://localhost:3306/db1"/>
+        <property name="username" value="root"/>
+        <property name="password" value="1234"/>
+    </bean>
+
+    管理C3P0对象
+    <bean id="c3p0" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+        <property name="driverClass" value="com.mysql.jdbc.Driver"/>
+        <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/db1"/>
+        <property name="user" value="root"/>
+        <property name="password" value="1234"/>
+    </bean>-->
+
+    <!--xmlns:context=""开启一个新的命名空间context
+    使用context命名空间加载properties配置文件
+    property-placeholder 属性占位符
+    system-properties-mode="NEVER" 代表不读取系统变量
+    <context:property-placeholder location="jdbc.properties" system-properties-mode="NEVER"/>
+    读取多个properties文件
+    <context:property-placeholder location="jdbc.properties,jdbc2.properties" system-properties-mode="NEVER"/>
+    读取所有properties文件
+    <context:property-placeholder location="*.properties" system-properties-mode="NEVER"/>
+    读取当前工程目录下的所有properties文件
+    <context:property-placeholder location="classpath:*.properties" system-properties-mode="NEVER"/>
+    读取工程目录加上依赖的Jar包目录下的所有properties文件-->
+    <context:property-placeholder location="classpath*:*.properties" system-properties-mode="NEVER"/>
+
+    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
+        <!--使用属性占位符${}读取jdbc.properties文件中的属性-->
+        <property name="driverClassName" value="${jdbc.driver}"/>
+        <property name="url" value="${jdbc.url}"/>
+        <property name="username" value="${jdbc.username}"/>
+        <property name="password" value="${jdbc.password}"/>
+    </bean>
+
+
+    <bean id="bookDao" class="dao.impl.BookDaoImpl">
+        <property name="name" value="${jdbc.driver}"/>
+    </bean>
+</beans>

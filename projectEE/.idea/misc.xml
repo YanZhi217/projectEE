@@ -33,6 +33,14 @@
         <option value="$PROJECT_DIR$/JavaWeb/day36_AJAX/pom.xml" />
         <option value="$PROJECT_DIR$/JavaWeb/day37_Vue/pom.xml" />
         <option value="$PROJECT_DIR$/JavaWeb/day38_FinalDemo/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring/day39_Spring/spring01_quickStart/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring/day39_Spring/spring02_instance/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring/day39_Spring/spring03_lifecycle/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring/day39_Spring/spring04_DIset/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring/day39_Spring/spring05_DIControcutor/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring/day39_Spring/spring06_DIautoware/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring/day39_Spring/spring07_DICollection/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring/day39_Spring/spring08_Datasource/pom.xml" />
       </list>
     </option>
   </component>

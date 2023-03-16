@@ -10,15 +10,23 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="day32_Servlet" />
+        <module name="spring04_DIset" />
         <module name="day29_MybatisDemo" />
-        <module name="day33_RequestDemo" />
-        <module name="day32_TomcatDemo3" />
-        <module name="day32_TomcatDemo2" />
+        <module name="spring05_DIControcutor" />
+        <module name="spring06_DIautoware" />
+        <module name="spring08_Datasource" />
         <module name="day36_AJAX" />
         <module name="day34_JSP" />
-        <module name="day36_Filter" />
         <module name="day34_BrandDemo" />
         <module name="day38_FinalDemo" />
+        <module name="spring02_instance" />
+        <module name="spring03_lifecycle" />
+        <module name="spring07_DICollection" />
+        <module name="day33_RequestDemo" />
+        <module name="day32_TomcatDemo3" />
+        <module name="spring01_quickStart" />
+        <module name="day32_TomcatDemo2" />
+        <module name="day36_Filter" />
         <module name="day35_Cookie" />
         <module name="day37_Vue" />
       </profile>
@@ -29,6 +37,8 @@
       <module name="day28_MavenDemo" target="12" />
       <module name="day30_HTML_CSS" target="12" />
       <module name="day32_TomcatDemo1" target="1.5" />
+      <module name="spring04_DIset (1)" target="12" />
+      <module name="spring04_DIset (2)" target="12" />
     </bytecodeTargetLevel>
   </component>
 </project>

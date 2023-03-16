@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--导入Spring的坐标spring-context，对应版本是5.2.10.RELEASE-->
+
+    <!--配置Bean-->
+    <!--Bean标签表示配置Bean
+    id属性表示给bean起名字
+    class属性表示给bean定义类型
+    name表示别名，与id作用等同,id是唯一的,如果无论从id还是name都无法获取bean，将抛出异常NoSuchDefinitionException
+    scope表示创建对象的方式,singleton表示单例(默认)，prototype表示非单例
+    scope的取值不仅仅只有singleton和prototype，还有request、session、application、 websocket ，表示创建出的对象放置在web容器(tomcat)
+    对应的位置。比如：request表示保存到request域中。-->
+    <bean id="bookDao" name="dao" class="dao.impl.BookDaoImpl"/>
+    <bean id="bookService" name="service bookService2" class="service.impl.BookServiceImpl" scope="prototype">
+        <!--配置service与dao的关系-->
+        <!--property表示配置当前bean的属性
+        name表示配置BookServiceImpl中哪一个具体的属性
+        ref表示参照哪一个bean-->
+        <property name="bookDao" ref="bookDao"/>
+    </bean>
+
+
+</beans>
