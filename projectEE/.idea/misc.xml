@@ -41,6 +41,12 @@
         <option value="$PROJECT_DIR$/Spring/day39_Spring/spring06_DIautoware/pom.xml" />
         <option value="$PROJECT_DIR$/Spring/day39_Spring/spring07_DICollection/pom.xml" />
         <option value="$PROJECT_DIR$/Spring/day39_Spring/spring08_Datasource/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring/day39_Spring/spring09_Container/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring/day39_Spring/spring10_AnnotationBean/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring/day39_Spring/spring11_AnnotationBeanManager/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring/day39_Spring/spring12_AnnotationBeanDi/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring/day39_Spring/spring13_AnnotationBeanManager/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring/day39_Spring/spring14_Mybatis/pom.xml" />
       </list>
     </option>
   </component>
