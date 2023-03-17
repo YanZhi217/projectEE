@@ -63,6 +63,16 @@
     <file url="file://$PROJECT_DIR$/Spring/day39_Spring/spring13_AnnotationBeanManager/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Spring/day39_Spring/spring14_Mybatis/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Spring/day39_Spring/spring14_Mybatis/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Spring/day39_Spring/spring15_Junit/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Spring/day39_Spring/spring15_Junit/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Spring/day39_Spring/spring16_AOP_Demo/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Spring/day39_Spring/spring16_AOP_Demo/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Spring/day39_Spring/spring17_AOPQuickStart/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Spring/day39_Spring/spring17_AOPQuickStart/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Spring/day39_Spring/spring18_AOP/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Spring/day39_Spring/spring18_AOP/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Spring/day39_Spring/spring18_AOP_PointCut/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Spring/day39_Spring/spring18_AOP_PointCut/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/day28_Maven/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/day28_Maven/src/main/resources" charset="UTF-8" />
   </component>

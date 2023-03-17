@@ -10,6 +10,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="day32_Servlet" />
+        <module name="spring17_AOPQuickStart" />
         <module name="spring06_DIautoware" />
         <module name="day36_AJAX" />
         <module name="spring13_AnnotationBeanManager" />
@@ -23,11 +24,13 @@
         <module name="day32_TomcatDemo3" />
         <module name="day32_TomcatDemo2" />
         <module name="day36_Filter" />
+        <module name="spring15_Junit" />
         <module name="spring04_DIset" />
         <module name="day29_MybatisDemo" />
         <module name="spring05_DIControcutor" />
         <module name="spring08_Datasource" />
         <module name="spring11_AnnotationBeanManager" />
+        <module name="spring18_AOP_PointCut" />
         <module name="day34_BrandDemo" />
         <module name="day38_FinalDemo" />
         <module name="spring07_DICollection" />
@@ -35,6 +38,7 @@
         <module name="spring09_Container" />
         <module name="day35_Cookie" />
         <module name="day37_Vue" />
+        <module name="spring16_AOP_Demo" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -45,6 +49,7 @@
       <module name="day32_TomcatDemo1" target="1.5" />
       <module name="spring04_DIset (1)" target="12" />
       <module name="spring04_DIset (2)" target="12" />
+      <module name="spring18_AOP" target="12" />
     </bytecodeTargetLevel>
   </component>
 </project>
