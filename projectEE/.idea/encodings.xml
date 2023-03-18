@@ -73,6 +73,26 @@
     <file url="file://$PROJECT_DIR$/Spring/day39_Spring/spring18_AOP/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Spring/day39_Spring/spring18_AOP_PointCut/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Spring/day39_Spring/spring18_AOP_PointCut/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Spring/day39_Spring/spring19_AOPAdviceType/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Spring/day39_Spring/spring19_AOPAdviceType/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Spring/day39_Spring/spring20_InterfaceRunSpeed/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Spring/day39_Spring/spring20_InterfaceRunSpeed/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Spring/day39_Spring/spring21_Advicedata/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Spring/day39_Spring/spring21_Advicedata/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Spring/day39_Spring/spring22_HandlePassword/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Spring/day39_Spring/spring22_HandlePassword/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Spring/day39_Spring/spring23_CaseTransfer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Spring/day39_Spring/spring23_CaseTransfer/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Spring/day39_Spring/spring24_CaseTransferLog/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Spring/day39_Spring/spring24_CaseTransferLog/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Spring/day40_SpringMVC/SpringMVC01_QuickStart/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Spring/day40_SpringMVC/SpringMVC01_QuickStart/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Spring/day40_SpringMVC/SpringMVC02_BeanLoad/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Spring/day40_SpringMVC/SpringMVC02_BeanLoad/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Spring/day40_SpringMVC/SpringMVC03_RequestMapping/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Spring/day40_SpringMVC/SpringMVC03_RequestMapping/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Spring/day40_SpringMVC/SpringMVC04_RequestParam/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Spring/day40_SpringMVC/SpringMVC04_RequestParam/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/day28_Maven/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/day28_Maven/src/main/resources" charset="UTF-8" />
   </component>

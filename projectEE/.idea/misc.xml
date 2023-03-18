@@ -14,6 +14,10 @@
     <file type="web" url="file://$PROJECT_DIR$/JavaWeb/day36_Filter" />
     <file type="web" url="file://$PROJECT_DIR$/JavaWeb/day37_Vue" />
     <file type="web" url="file://$PROJECT_DIR$/JavaWeb/day38_FinalDemo" />
+    <file type="web" url="file://$PROJECT_DIR$/Spring/day40_SpringMVC/SpringMVC01_QuickStart" />
+    <file type="web" url="file://$PROJECT_DIR$/Spring/day40_SpringMVC/SpringMVC02_BeanLoad" />
+    <file type="web" url="file://$PROJECT_DIR$/Spring/day40_SpringMVC/SpringMVC03_RequestMapping" />
+    <file type="web" url="file://$PROJECT_DIR$/Spring/day40_SpringMVC/SpringMVC04_RequestParam" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
@@ -51,6 +55,19 @@
         <option value="$PROJECT_DIR$/Spring/day39_Spring/spring16_AOP_Demo/pom.xml" />
         <option value="$PROJECT_DIR$/Spring/day39_Spring/spring17_AOPQuickStart/pom.xml" />
         <option value="$PROJECT_DIR$/Spring/day39_Spring/spring18_AOP_PointCut/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring/day39_Spring/spring19_AOPAdviceType/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring/day39_Spring/spring20_InterfaceRunSpeed/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring/day39_Spring/spring21_Advicedata/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring/day39_Spring/spring22_HandlePassword/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring/day39_Spring/spring23_CaseTransfer/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring/day39_Spring/spring24_CaseTransferLog/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring/Spring40_SpringMVC/SpringMVC01_QuickStart/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring/Spring40_SpringMVC/SpringMVC02_BeanLoad/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring/Spring40_SpringMVC/SpringMVC03_RequestMapping/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring/day40_SpringMVC/SpringMVC04_RequestParam/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring/day40_SpringMVC/SpringMVC01_QuickStart/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring/day40_SpringMVC/SpringMVC02_BeanLoad/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring/day40_SpringMVC/SpringMVC03_RequestMapping/pom.xml" />
       </list>
     </option>
   </component>
