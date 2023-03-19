@@ -22,13 +22,16 @@
         <module name="spring23_CaseTransfer" />
         <module name="spring02_instance" />
         <module name="SpringMVC04_RequestParam" />
+        <module name="SpringMVC07_RestTest" />
         <module name="spring03_lifecycle" />
         <module name="spring12_AnnotationBeanDi" />
+        <module name="SpringMVC05_Response" />
         <module name="day33_RequestDemo" />
         <module name="spring14_Mybatis" />
         <module name="day32_TomcatDemo3" />
         <module name="spring19_AOPAdviceType" />
         <module name="day32_TomcatDemo2" />
+        <module name="SpringMVC06_Rest" />
         <module name="day36_Filter" />
         <module name="spring15_Junit" />
         <module name="SpringMVC01_QuickStart" />

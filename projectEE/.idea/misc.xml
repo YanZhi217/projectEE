@@ -18,6 +18,9 @@
     <file type="web" url="file://$PROJECT_DIR$/Spring/day40_SpringMVC/SpringMVC02_BeanLoad" />
     <file type="web" url="file://$PROJECT_DIR$/Spring/day40_SpringMVC/SpringMVC03_RequestMapping" />
     <file type="web" url="file://$PROJECT_DIR$/Spring/day40_SpringMVC/SpringMVC04_RequestParam" />
+    <file type="web" url="file://$PROJECT_DIR$/Spring/day40_SpringMVC/SpringMVC05_Response" />
+    <file type="web" url="file://$PROJECT_DIR$/Spring/day40_SpringMVC/SpringMVC06_Rest" />
+    <file type="web" url="file://$PROJECT_DIR$/Spring/day40_SpringMVC/SpringMVC07_RestTest" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
@@ -68,6 +71,9 @@
         <option value="$PROJECT_DIR$/Spring/day40_SpringMVC/SpringMVC01_QuickStart/pom.xml" />
         <option value="$PROJECT_DIR$/Spring/day40_SpringMVC/SpringMVC02_BeanLoad/pom.xml" />
         <option value="$PROJECT_DIR$/Spring/day40_SpringMVC/SpringMVC03_RequestMapping/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring/day40_SpringMVC/SpringMVC05_Response/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring/day40_SpringMVC/SpringMVC06_Rest/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring/day40_SpringMVC/SpringMVC07_RestTest/pom.xml" />
       </list>
     </option>
   </component>
