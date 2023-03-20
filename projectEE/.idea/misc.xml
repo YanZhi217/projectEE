@@ -26,6 +26,8 @@
     <file type="web" url="file://$PROJECT_DIR$/Spring/day40_SpringMVC/SpringMVC10_Exception" />
     <file type="web" url="file://$PROJECT_DIR$/Spring/day40_SpringMVC/SpringMVC11_Page" />
     <file type="web" url="file://$PROJECT_DIR$/Spring/day40_SpringMVC/SpringMVC12_Intercepter" />
+    <file type="web" url="file://$PROJECT_DIR$/Spring/day42_MavenPlus/maven02_ssm" />
+    <file type="web" url="file://$PROJECT_DIR$/Spring/day42_MavenPlus/maven_02_ssm" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
@@ -94,7 +96,14 @@
         <option value="$PROJECT_DIR$/Spring/day41_SpringBoot/SpringBoot07_Junit/pom.xml" />
         <option value="$PROJECT_DIR$/Spring/day41_SpringBoot/SpringBoot08_Mybatis/pom.xml" />
         <option value="$PROJECT_DIR$/Spring/day41_SpringBoot/SpringBoot09_SSM/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring/day42_MavenPlus/maven01_parent/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring/day42_MavenPlus/maven_02_ssm/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/Spring/day42_MavenPlus/maven01_parent/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_12" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">

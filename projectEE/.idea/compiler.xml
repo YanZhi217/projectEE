@@ -29,6 +29,7 @@
         <module name="spring04_DIset" />
         <module name="SpringBoot08_Mybatis" />
         <module name="spring22_HandlePassword" />
+        <module name="maven_02_ssm" />
         <module name="SpringBoot07_Junit" />
         <module name="spring07_DICollection" />
         <module name="spring01_quickStart" />
@@ -74,6 +75,10 @@
       <module name="day28_MavenDemo" target="12" />
       <module name="day30_HTML_CSS" target="12" />
       <module name="day32_TomcatDemo1" target="1.5" />
+      <module name="maven01_parent" target="12" />
+      <module name="maven02_ssm" target="12" />
+      <module name="maven03_pojo" target="12" />
+      <module name="maven04_dao" target="12" />
       <module name="spring04_DIset (1)" target="12" />
       <module name="spring04_DIset (2)" target="12" />
       <module name="spring18_AOP" target="12" />

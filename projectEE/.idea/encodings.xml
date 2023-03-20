@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/../Maven/apache-maven-3.6.1-bin/apache-maven-3.6.1/Local_Repository/org/springframework/boot/spring-boot-starter-parent/2.5.0/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../Maven/apache-maven-3.6.1-bin/apache-maven-3.6.1/Local_Repository/org/springframework/boot/spring-boot-starter-parent/2.7.9/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/JavaWeb/day28_MavenDemo/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/JavaWeb/day28_MavenDemo/src/main/resources" charset="UTF-8" />
@@ -112,6 +113,16 @@
     <file url="file://$PROJECT_DIR$/Spring/day41_SpringBoot/SpringBoot07_Junit/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Spring/day41_SpringBoot/SpringBoot08_Mybatis/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Spring/day41_SpringBoot/SpringBoot09_SSM/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Spring/day42_MavenPlus/maven01_parent/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Spring/day42_MavenPlus/maven01_parent/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Spring/day42_MavenPlus/maven02_ssm/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Spring/day42_MavenPlus/maven02_ssm/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Spring/day42_MavenPlus/maven03_pojo/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Spring/day42_MavenPlus/maven03_pojo/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Spring/day42_MavenPlus/maven04_dao/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Spring/day42_MavenPlus/maven04_dao/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Spring/day42_MavenPlus/maven_02_ssm/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Spring/day42_MavenPlus/maven_02_ssm/src/main/resources" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>
