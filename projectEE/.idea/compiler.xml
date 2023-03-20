@@ -9,10 +9,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="day32_Servlet" />
         <module name="spring17_AOPQuickStart" />
-        <module name="spring21_Advicedata" />
-        <module name="spring24_CaseTransferLog" />
         <module name="SpringMVC10_Exception" />
         <module name="spring06_DIautoware" />
         <module name="day36_AJAX" />
@@ -21,42 +18,54 @@
         <module name="spring10_AnnotationBean" />
         <module name="spring20_InterfaceRunSpeed" />
         <module name="spring23_CaseTransfer" />
-        <module name="SpringMVC09_Result" />
-        <module name="spring02_instance" />
         <module name="SpringMVC04_RequestParam" />
-        <module name="SpringMVC07_RestTest" />
+        <module name="SpringBoot04_Profile" />
         <module name="SpringMVC12_Intercepter" />
-        <module name="spring03_lifecycle" />
         <module name="spring12_AnnotationBeanDi" />
         <module name="SpringMVC05_Response" />
+        <module name="SpringBoot06_ConfigFile" />
+        <module name="day36_Filter" />
+        <module name="spring15_Junit" />
+        <module name="spring04_DIset" />
+        <module name="SpringBoot08_Mybatis" />
+        <module name="spring22_HandlePassword" />
+        <module name="SpringBoot07_Junit" />
+        <module name="spring07_DICollection" />
+        <module name="spring01_quickStart" />
+        <module name="SpringMVC08_SSM" />
+        <module name="day37_Vue" />
+        <module name="spring16_AOP_Demo" />
+        <module name="day32_Servlet" />
+        <module name="spring21_Advicedata" />
+        <module name="spring24_CaseTransferLog" />
+        <module name="SpringBoot03_ReadData" />
+        <module name="SpringMVC09_Result" />
+        <module name="spring02_instance" />
+        <module name="SpringMVC07_RestTest" />
+        <module name="spring03_lifecycle" />
         <module name="day33_RequestDemo" />
         <module name="spring14_Mybatis" />
         <module name="day32_TomcatDemo3" />
         <module name="spring19_AOPAdviceType" />
         <module name="SpringMVC11_Page" />
+        <module name="SpringBoot02_BaseConfig" />
         <module name="day32_TomcatDemo2" />
         <module name="SpringMVC06_Rest" />
-        <module name="day36_Filter" />
-        <module name="spring15_Junit" />
+        <module name="SpringBoot09_SSM" />
         <module name="SpringMVC01_QuickStart" />
-        <module name="spring04_DIset" />
         <module name="day29_MybatisDemo" />
-        <module name="spring22_HandlePassword" />
         <module name="spring05_DIControcutor" />
+        <module name="SpringBoot05_MavenBootProfile" />
         <module name="spring08_Datasource" />
         <module name="spring11_AnnotationBeanManager" />
         <module name="spring18_AOP_PointCut" />
         <module name="day34_BrandDemo" />
         <module name="day38_FinalDemo" />
         <module name="SpringMVC02_BeanLoad" />
+        <module name="SpringBoot01_QuickStart" />
         <module name="SpringMVC03_RequestMapping" />
-        <module name="spring07_DICollection" />
-        <module name="spring01_quickStart" />
         <module name="spring09_Container" />
-        <module name="SpringMVC08_SSM" />
         <module name="day35_Cookie" />
-        <module name="day37_Vue" />
-        <module name="spring16_AOP_Demo" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -69,5 +78,18 @@
       <module name="spring04_DIset (2)" target="12" />
       <module name="spring18_AOP" target="12" />
     </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="SpringBoot01_QuickStart" options="-parameters" />
+      <module name="SpringBoot02_BaseConfig" options="-parameters" />
+      <module name="SpringBoot03_ReadData" options="-parameters" />
+      <module name="SpringBoot04_Profile" options="-parameters" />
+      <module name="SpringBoot05_MavenBootProfile" options="-parameters" />
+      <module name="SpringBoot06_ConfigFile" options="-parameters" />
+      <module name="SpringBoot07_Junit" options="-parameters" />
+      <module name="SpringBoot08_Mybatis" options="-parameters" />
+      <module name="SpringBoot09_SSM" options="-parameters" />
+    </option>
   </component>
 </project>

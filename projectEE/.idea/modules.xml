@@ -7,6 +7,7 @@
       <module fileurl="file://$PROJECT_DIR$/JavaWeb/day30_HTML_CSS/day30_HTML_CSS.iml" filepath="$PROJECT_DIR$/JavaWeb/day30_HTML_CSS/day30_HTML_CSS.iml" />
       <module fileurl="file://$PROJECT_DIR$/JavaWeb/day31_JavaScript/day31_JavaScript.iml" filepath="$PROJECT_DIR$/JavaWeb/day31_JavaScript/day31_JavaScript.iml" />
       <module fileurl="file://$PROJECT_DIR$/Spring/day40_SpringMVC/day40_SpringMVC.iml" filepath="$PROJECT_DIR$/Spring/day40_SpringMVC/day40_SpringMVC.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Spring/day41_SpringBoot/day41_SpringBoot.iml" filepath="$PROJECT_DIR$/Spring/day41_SpringBoot/day41_SpringBoot.iml" />
       <module fileurl="file://$PROJECT_DIR$/projectEE.iml" filepath="$PROJECT_DIR$/projectEE.iml" />
     </modules>
   </component>

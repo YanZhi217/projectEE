@@ -84,6 +84,16 @@
         <option value="$PROJECT_DIR$/Spring/day40_SpringMVC/SpringMVC10_Exception/pom.xml" />
         <option value="$PROJECT_DIR$/Spring/day40_SpringMVC/SpringMVC11_Page/pom.xml" />
         <option value="$PROJECT_DIR$/Spring/day40_SpringMVC/SpringMVC12_Intercepter/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring/SpringBoot/SpringBoot01_QuickStart/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring/day41_SpringBoot/SpringBoot01_QuickStart/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring/day41_SpringBoot/SpringBoot02_BaseConfig/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring/day41_SpringBoot/SpringBoot03_ReadData/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring/day41_SpringBoot/SpringBoot04_Profile/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring/day41_SpringBoot/SpringBoot05_MavenBootProfile/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring/day41_SpringBoot/SpringBoot06_ConfigFile/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring/day41_SpringBoot/SpringBoot07_Junit/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring/day41_SpringBoot/SpringBoot08_Mybatis/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring/day41_SpringBoot/SpringBoot09_SSM/pom.xml" />
       </list>
     </option>
   </component>
