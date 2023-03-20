@@ -21,6 +21,11 @@
     <file type="web" url="file://$PROJECT_DIR$/Spring/day40_SpringMVC/SpringMVC05_Response" />
     <file type="web" url="file://$PROJECT_DIR$/Spring/day40_SpringMVC/SpringMVC06_Rest" />
     <file type="web" url="file://$PROJECT_DIR$/Spring/day40_SpringMVC/SpringMVC07_RestTest" />
+    <file type="web" url="file://$PROJECT_DIR$/Spring/day40_SpringMVC/SpringMVC08_SSM" />
+    <file type="web" url="file://$PROJECT_DIR$/Spring/day40_SpringMVC/SpringMVC09_Result" />
+    <file type="web" url="file://$PROJECT_DIR$/Spring/day40_SpringMVC/SpringMVC10_Exception" />
+    <file type="web" url="file://$PROJECT_DIR$/Spring/day40_SpringMVC/SpringMVC11_Page" />
+    <file type="web" url="file://$PROJECT_DIR$/Spring/day40_SpringMVC/SpringMVC12_Intercepter" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
@@ -74,6 +79,11 @@
         <option value="$PROJECT_DIR$/Spring/day40_SpringMVC/SpringMVC05_Response/pom.xml" />
         <option value="$PROJECT_DIR$/Spring/day40_SpringMVC/SpringMVC06_Rest/pom.xml" />
         <option value="$PROJECT_DIR$/Spring/day40_SpringMVC/SpringMVC07_RestTest/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring/day40_SpringMVC/SpringMVC08_SSM/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring/day40_SpringMVC/SpringMVC09_Result/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring/day40_SpringMVC/SpringMVC10_Exception/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring/day40_SpringMVC/SpringMVC11_Page/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring/day40_SpringMVC/SpringMVC12_Intercepter/pom.xml" />
       </list>
     </option>
   </component>
