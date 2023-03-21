@@ -5,6 +5,7 @@
       <directory url="file://$PROJECT_DIR$/day28_Maven/src/main/resources/archetype-resources" includeSubdirectories="true" />
     </excludeFromCompile>
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
@@ -39,6 +40,7 @@
         <module name="spring16_AOP_Demo" />
         <module name="day32_Servlet" />
         <module name="spring21_Advicedata" />
+        <module name="MybatisPlus_04_Generator" />
         <module name="maven_04_dao" />
         <module name="spring24_CaseTransferLog" />
         <module name="SpringBoot03_ReadData" />
@@ -51,12 +53,15 @@
         <module name="day32_TomcatDemo3" />
         <module name="spring19_AOPAdviceType" />
         <module name="SpringMVC11_Page" />
+        <module name="MybatisPlus_01_quickstart" />
         <module name="SpringBoot02_BaseConfig" />
         <module name="day32_TomcatDemo2" />
         <module name="SpringMVC06_Rest" />
         <module name="SpringBoot09_SSM" />
+        <module name="MybatisPlus_03_DML" />
         <module name="SpringMVC01_QuickStart" />
         <module name="day29_MybatisDemo" />
+        <module name="MybatisPlus_02_DQL" />
         <module name="spring05_DIControcutor" />
         <module name="SpringBoot05_MavenBootProfile" />
         <module name="spring08_Datasource" />
@@ -88,6 +93,10 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="MybatisPlus_01_quickstart" options="-parameters" />
+      <module name="MybatisPlus_02_DQL" options="-parameters" />
+      <module name="MybatisPlus_03_DML" options="-parameters" />
+      <module name="MybatisPlus_04_Generator" options="-parameters" />
       <module name="SpringBoot01_QuickStart" options="-parameters" />
       <module name="SpringBoot02_BaseConfig" options="-parameters" />
       <module name="SpringBoot03_ReadData" options="-parameters" />

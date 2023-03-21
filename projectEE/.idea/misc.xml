@@ -27,6 +27,7 @@
     <file type="web" url="file://$PROJECT_DIR$/Spring/day40_SpringMVC/SpringMVC11_Page" />
     <file type="web" url="file://$PROJECT_DIR$/Spring/day40_SpringMVC/SpringMVC12_Intercepter" />
     <file type="web" url="file://$PROJECT_DIR$/Spring/day42_MavenPlus/maven02_ssm" />
+    <file type="web" url="file://$PROJECT_DIR$/Spring/day42_MavenPlus/maven_01_parent/src/main/resources" />
     <file type="web" url="file://$PROJECT_DIR$/Spring/day42_MavenPlus/maven_02_ssm" />
   </component>
   <component name="MavenProjectsManager">
@@ -101,6 +102,10 @@
         <option value="$PROJECT_DIR$/Spring/day42_MavenPlus/maven_03_pojo/pom.xml" />
         <option value="$PROJECT_DIR$/Spring/day42_MavenPlus/maven_04_dao/pom.xml" />
         <option value="$PROJECT_DIR$/Spring/day42_MavenPlus/maven_01_parent/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring/day43_MybatisPlus/MybatisPlus_01_quickstart/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring/day43_MybatisPlus/MybatisPlus_02_DQL/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring/day43_MybatisPlus/MybatisPlus_03_DML/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring/day43_MybatisPlus/MybatisPlus_04_Generator/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
