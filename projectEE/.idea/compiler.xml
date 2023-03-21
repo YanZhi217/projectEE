@@ -25,6 +25,7 @@
         <module name="SpringMVC05_Response" />
         <module name="SpringBoot06_ConfigFile" />
         <module name="day36_Filter" />
+        <module name="maven_03_pojo" />
         <module name="spring15_Junit" />
         <module name="spring04_DIset" />
         <module name="SpringBoot08_Mybatis" />
@@ -38,6 +39,7 @@
         <module name="spring16_AOP_Demo" />
         <module name="day32_Servlet" />
         <module name="spring21_Advicedata" />
+        <module name="maven_04_dao" />
         <module name="spring24_CaseTransferLog" />
         <module name="SpringBoot03_ReadData" />
         <module name="SpringMVC09_Result" />

@@ -9,6 +9,7 @@
       <module fileurl="file://$PROJECT_DIR$/Spring/day40_SpringMVC/day40_SpringMVC.iml" filepath="$PROJECT_DIR$/Spring/day40_SpringMVC/day40_SpringMVC.iml" />
       <module fileurl="file://$PROJECT_DIR$/Spring/day41_SpringBoot/day41_SpringBoot.iml" filepath="$PROJECT_DIR$/Spring/day41_SpringBoot/day41_SpringBoot.iml" />
       <module fileurl="file://$PROJECT_DIR$/Spring/day42_MavenPlus/day42_MavenPlus.iml" filepath="$PROJECT_DIR$/Spring/day42_MavenPlus/day42_MavenPlus.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Spring/day43_MybatisPlus/day43_MybatisPlus.iml" filepath="$PROJECT_DIR$/Spring/day43_MybatisPlus/day43_MybatisPlus.iml" />
       <module fileurl="file://$PROJECT_DIR$/projectEE.iml" filepath="$PROJECT_DIR$/projectEE.iml" />
     </modules>
   </component>
