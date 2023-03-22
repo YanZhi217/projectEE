@@ -1,9 +1,7 @@
 package Generator.aaa.domain;
 
-import com.baomidou.mybatisplus.annotation.TableName;
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.Version;
-import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.*;
+
 import java.io.Serializable;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -34,5 +32,10 @@ public class User implements Serializable {
 
     private String tel;
 
+    @TableLogic(value = "0", delval = "1")
+    private Integer deleted;
+
+    @Version
+    private Integer version;
 
 }
