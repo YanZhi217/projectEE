@@ -34,16 +34,16 @@ function editEmployee (params) {
 }
 
 //删除---删除员工
-function deleteEmployee (params) {
+function deleteEmployee (id) {
   return $axios({
-    url: '/employee',
-    method: 'delete',
-    data: { ...params}
+    url: `/employee/${id}`,
+    method: 'delete'
   })
 }
 
 
 // 修改页面反查详情接口
+//`反撇号为Js提供了简单的插值功能
 function queryEmployeeById (id) {
   return $axios({
     url: `/employee/${id}`,

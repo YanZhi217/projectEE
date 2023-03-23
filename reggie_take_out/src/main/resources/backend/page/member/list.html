@@ -87,11 +87,13 @@
             >
               {{ scope.row.status == '1' ? '禁用' : '启用' }}
             </el-button>
+            <el-divider direction="vertical"></el-divider>
             <el-button
                     type="text"
                     size="small"
                     class="delBut non"
                     @click="deleteHandle(scope.row.id)"
+                    v-if="user === 'admin'"
             >
               删除
             </el-button>
@@ -205,8 +207,8 @@
               'cancelButtonText': '取消',
               'type': 'warning'
             }).then(() => {
-              deleteEmployee({'id': dt}).then(res =>{
-                console.log('deleteEmployee',res)
+              deleteEmployee(dt).then(res =>{
+                console.log(res)
                 if(String(res.code) === '1'){
                   this.$message.success('删除成功')
                   this.handleQuery()

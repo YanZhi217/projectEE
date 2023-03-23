@@ -137,14 +137,18 @@ public class EmployeeController {
 
     /**
      * 根据id删除用户
-     * @param request
-     * @param employee
+     * @param id
      * @return
      */
-    @DeleteMapping
-    public R<String> delete(HttpServletRequest request, @RequestBody Employee employee){
-        employeeService.removeById(employee);
-        return R.success("删除成功");
+    @DeleteMapping("/{id}")
+    public R<String> delete(@PathVariable Long id){
+        boolean flag = employeeService.removeById(id);
+        if(flag){
+            return R.success("删除成功");
+        }else{
+            return R.error("删除失败");
+        }
+
     }
 
     /**
