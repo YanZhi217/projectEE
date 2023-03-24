@@ -10,6 +10,7 @@ import com.reggie.mapper.SetMealMapper;
 import com.reggie.service.SetMealDishService;
 import com.reggie.service.SetMealService;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -37,6 +38,49 @@ public class SetMealServiceImpl extends ServiceImpl<SetMealMapper, Setmeal> impl
         setmealDishes = setmealDishes.stream().peek((item) -> item.setSetmealId(setmealDto.getId())).collect(Collectors.toList());
         //保存套餐和菜品的关联信息,操作setmeal_dish, 执行insert操作
         setMealDishService.saveBatch(setmealDishes);
+    }
+
+    /**
+     * 根据id查询套餐信息及套餐关联信息
+     * @param id
+     * @return
+     */
+    @Override
+    public SetmealDto getByIdWithDish(Long id) {
+        //查询菜品信息, 从setmeal表
+        Setmeal setmeal = this.getById(id);
+        SetmealDto setmealDto = new SetmealDto();
+        BeanUtils.copyProperties(setmeal, setmealDto);
+        //查询口味信息, 从setmeal_dish表
+        LambdaQueryWrapper<SetmealDish> queryWrapper = new LambdaQueryWrapper<>();
+        queryWrapper.eq(SetmealDish::getDishId, setmeal.getId());
+        List<SetmealDish> flavors = setMealDishService.list(queryWrapper);
+        setmealDto.setSetmealDishes(flavors);
+        return setmealDto;
+    }
+
+    /**
+     * 修改套餐信息及套餐关联菜品信息
+     * @param setmealDto
+     */
+    @Override
+    @Transactional
+    public void updateWithDish(SetmealDto setmealDto) {
+        //更新setmeal表基本信息
+        this.updateById(setmealDto);
+        //清理当前口味信息 setmeal_dish delete
+        LambdaQueryWrapper<SetmealDish> queryWrapper = new LambdaQueryWrapper<>();
+        queryWrapper.eq(SetmealDish::getDishId, setmealDto.getId());
+        setMealDishService.remove(queryWrapper);
+        //添加当前提交的口味信息 setmeal_dish insert
+        List<SetmealDish> flavors =  setmealDto.getSetmealDishes();
+
+        flavors = flavors.stream().map((item) -> {
+            item.setSetmealId(setmealDto.getId());
+            return item;
+        }).collect(Collectors.toList());
+
+        setMealDishService.saveBatch(flavors);
     }
 
     /**

@@ -1,6 +1,7 @@
 package com.reggie.controller;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
+import com.baomidou.mybatisplus.core.conditions.update.LambdaUpdateWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.reggie.common.R;
 import com.reggie.dto.SetmealDto;
@@ -51,7 +52,7 @@ public class SetMealController {
      * @return
      */
     @GetMapping("/page")
-    public R<Page> page(int page, int pageSize, String name){
+    public R<Page<SetmealDto>> page(int page, int pageSize, String name){
         //分页构造器对象
         Page<Setmeal> pageInfo = new Page<>(page, pageSize);
         Page<SetmealDto> dtoPage = new Page<>();
@@ -87,6 +88,29 @@ public class SetMealController {
     }
 
     /**
+     * 根据id查询对应的套餐信息和菜品关联信息
+     * @param id
+     * @return
+     */
+    @GetMapping("/{id}")
+    public R<SetmealDto> get(@PathVariable Long id){
+        SetmealDto setmealDto = setMealService.getByIdWithDish(id);
+        return R.success(setmealDto);
+    }
+
+    /**
+     * 修改菜品
+     * @param setmealDto
+     * @return
+     */
+    @PutMapping
+    public R<String> update(@RequestBody SetmealDto setmealDto){
+        log.info(setmealDto.toString());
+        setMealService.updateWithDish(setmealDto);
+        return R.success("修改套餐成功");
+    }
+
+    /**
      * 删除套餐 批量 单个
      * @param ids
      * @return
@@ -96,6 +120,40 @@ public class SetMealController {
         log.info("ids:{}", ids);
         setMealService.removeWithDish(ids);
         return R.success("套餐数据删除成功");
+    }
+
+    /**
+     * 停售 起售 批量
+     * @param st
+     * @param ids
+     * @return
+     */
+    @PostMapping("/status/{st}")
+    public R<String> setStatus(@PathVariable Integer st,@RequestParam List<Long> ids){
+        //构造条件构造器
+        LambdaUpdateWrapper<Setmeal> updateWrapper = new LambdaUpdateWrapper<>();
+        //添加过滤条件
+        updateWrapper.set(Setmeal::getStatus,st).in(Setmeal::getId,ids);
+        setMealService.update(updateWrapper);
+
+        return R.success("套餐信息修改成功");
+    }
+
+    /**
+     * 根据条件查询套餐数据
+     * @param setmeal
+     * @return
+     */
+    @GetMapping("/list")
+    public R<List<Setmeal>> list(Setmeal setmeal){
+        LambdaQueryWrapper<Setmeal> queryWrapper = new LambdaQueryWrapper<>();
+        queryWrapper.eq(setmeal.getCategoryId() != null,Setmeal::getCategoryId,setmeal.getCategoryId());
+        queryWrapper.eq(setmeal.getStatus() != null,Setmeal::getStatus,setmeal.getStatus());
+        queryWrapper.orderByDesc(Setmeal::getUpdateTime);
+
+        List<Setmeal> list = setMealService.list(queryWrapper);
+
+        return R.success(list);
     }
     //http://localhost:8080/backend/page/login/login.html
 }

@@ -11,8 +11,9 @@ import java.util.List;
  * 整合Dish与DishFlavor数据
  */
 @Data
-public class DishDTO extends Dish {
+public class DishDto extends Dish {
 
+    //菜品对应的口味数据
     private List<DishFlavor> flavors = new ArrayList<>();
 
     private String categoryName;
