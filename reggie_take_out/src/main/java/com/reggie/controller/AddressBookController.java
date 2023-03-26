@@ -4,7 +4,6 @@ import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.update.LambdaUpdateWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.reggie.common.BaseContext;
-import com.reggie.common.CustomException;
 import com.reggie.common.R;
 import com.reggie.entity.AddressBook;
 import com.reggie.service.AddressBookService;
@@ -61,7 +60,7 @@ public class AddressBookController {
      * 根据id查询地址
      */
     @GetMapping("/{id}")
-    public R<AddressBook> get(@PathVariable Long id) {
+    public R get(@PathVariable Long id) {
         AddressBook addressBook = addressBookService.getById(id);
         if (addressBook != null) {
             return R.success(addressBook);
@@ -104,37 +103,5 @@ public class AddressBookController {
 
         //SQL:select * from address_book where user_id = ? order by update_time desc
         return R.success(addressBookService.list(queryWrapper));
-    }
-
-    /**
-     * 修改地址
-     * @param addressBook
-     * @return
-     */
-    @PutMapping
-    public R<String> updateAdd(@RequestBody AddressBook addressBook) {
-        if (addressBook == null) {
-            throw new CustomException("地址信息不存在，请刷新重试");
-        }
-        addressBookService.updateById(addressBook);
-        return R.success("地址修改成功");
-    }
-
-    /**
-     * 删除地址
-     * @param id
-     * @return
-     */
-    @DeleteMapping()
-    public R<String> deleteAdd(@RequestParam("ids") Long id) {
-        if (id == null) {
-            throw new CustomException("地址信息不存在，请刷新重试");
-        }
-        AddressBook addressBook = addressBookService.getById(id);
-        if (addressBook == null) {
-            throw new CustomException("地址信息不存在，请刷新重试");
-        }
-        addressBookService.removeById(id);
-        return R.success("地址删除成功");
     }
 }
