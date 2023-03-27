@@ -49,7 +49,11 @@ public class LoginCheckFilter implements Filter{
                 "/backend/**",      //后端页面
                 "/front/**",        //前端页面
                 "/user/sendMsg",    //移动端发送短信
-                "/user/login"       //移动端顾客登录
+                "/user/login",       //移动端顾客登录
+                "/doc.html",         //swagger接口文档
+                "/webjars/**",
+                "/swagger-resources",
+                "/v2/api-docs"
         };
 
         //判断本次请求, 是否需要登录, 才可以访问
