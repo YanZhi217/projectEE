@@ -142,6 +142,10 @@ public class DishController {
         //log打印看看能否接收单个和批量
         log.info("删除的ids: {}",ids);
         dishService.deleteWithFlavor(ids);
+        for (Long id : ids) {
+            String key = "dish_" + id + "_1";
+            redisTemplate.delete(key);
+        }
         return R.success("删除成功"); //返回成功
     }
 
@@ -174,6 +178,10 @@ public class DishController {
         //添加过滤条件
         updateWrapper.set(Dish::getStatus,st).in(Dish::getId,ids);
         dishService.update(updateWrapper);
+        for (Long id : ids) {
+            String key = "dish_" + id + "_1";
+            redisTemplate.delete(key);
+        }
 
         return R.success("菜品信息修改成功");
     }
