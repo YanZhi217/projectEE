@@ -23,7 +23,7 @@ spring:
         username: root
         password: root
     masterslave:
-      # 读写分离配置
+      # 读写分离配置 负载均衡 通过轮询查询从库实现
       load-balance-algorithm-type: round_robin
       # 最终的数据源名称
       name: dataSource
